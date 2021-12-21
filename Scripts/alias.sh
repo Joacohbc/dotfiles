@@ -22,6 +22,4 @@ alias pastef="xclip-pastefile" #Pegar archivo a CB
 alias ipc="curl -s http:/ifconfig.me | xclip -sel clip" #Copiar IP Publica al CB
 
 #Moverme entre directorios
-alias irWinDsk="cd /home/joaco/ArchivosWindows/Users/Joaco/Desktop"
-alias irWinMy="cd /home/joaco/ArchivosWindows/Users/Joaco/Documents/Escritorio"
 

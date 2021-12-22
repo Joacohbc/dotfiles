@@ -22,4 +22,4 @@ alias pastef="xclip-pastefile" #Pegar archivo a CB
 alias ipc="curl -s http:/ifconfig.me | xclip -sel clip" #Copiar IP Publica al CB
 
 #Moverme entre directorios
-
+alias goProject="cd ~/Archivos/Colegio\ y\ Estudio/Z-Proyectos/"

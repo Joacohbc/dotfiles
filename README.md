@@ -1,20 +1,20 @@
 # dotfiles
- My Dotfiles
+ My Dotfiles c:
 
 OS:
-- Manjaro 
+- Arch Linux distro - Manjaro 
 
 Need:
-1. i3gaps
-2. betterlockscreen
-3. xrandr
-4. rofi 
-5. picom
-6. nitrogen
-7. playerctl
-8. brightnessctl
-9. polybar with polybar-themes(theme 'hack', edited by me)
-10. dunst
+1. i3gaps - Windows Manager
+2. betterlockscreen - Screen Lock
+3. xrandr - Configure Monitors
+4. rofi - Launcher/Help Windwos Movem
+5. picom - Trasparency 
+6. nitrogen - Wallpapers
+7. playerctl - Music control
+8. brightnessctl - Bright control
+9. polybar with polybar-themes(theme 'hack', edited by me) - Bars
+10. dunst - Notification Manager
 
 Githubs that I use:
 - https://git/zbaylin/rofi-wifi-menuhub.com
@@ -22,11 +22,12 @@ Githubs that I use:
 - https://github.com/adi1090x/polybar-themes
 
 My tools:
-1. zsh with oh-my-zsh - Shel
+1. zsh with oh-my-zsh with theme "powerlevel10k" - Shell 
 2. flameshot - Screenshots
 3. vivaldi - Browser
 4. alacritty - Terminal
-5. ranger && nautiulus - File
+5. ranger && nautilus - File
 6. htop && gtop - Task management
 7. xclip && copyq - Clipboard
-8. yay
+8. yay - Package management
+9. nano, VSCode && nvim - Text/Code Editor

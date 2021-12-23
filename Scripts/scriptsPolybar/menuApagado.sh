@@ -11,12 +11,12 @@ uptime=$(uptime -p | sed -e 's/up //g')
 
 rofi_command="rofi" 
 
-shutdown=" Shutdown"
-reboot=" Restart"
-lock=" Lock"
-updateLock=" Update Lockscreen "
-suspend=" Sleep"
-logout=" Logout"
+lock="1-  Lock"
+updateLock="2-  Update Lockscreen "
+suspend="3-  Sleep"
+shutdown="4-  Shutdown"
+logout="5-  Logout"
+reboot="6-  Restart"
 
 # Confirmation
 confirm_exit() {
@@ -32,7 +32,7 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$updateLock\n$suspend\n$logout\n$reboot\n$shutdown"
+options="$lock\n$updateLock\n$suspend\n$shutdown\n$logout\n$reboot"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime $uptime" -I -dmenu -selected-row 0)"
 case $chosen in
@@ -63,16 +63,9 @@ case $chosen in
 		sh ~/Scripts/actualizarWall.sh
 		;;
     $suspend)
-		ans=$(confirm_exit &)
-		if [[ $ans == "yes" || $ans == "YES" || $ans == "y" || $ans == "Y" ]]; then
-			mpc -q pause
-			amixer set Master mute
-			systemctl suspend
-		elif [[ $ans == "no" || $ans == "NO" || $ans == "n" || $ans == "N" ]]; then
-			exit 0
-        else
-			msg
-        fi
+		mpc -q pause
+		amixer set Master mute
+		(betterlockscreen -l &) && systemctl suspend
         ;;
     $logout)
 		ans=$(confirm_exit &)

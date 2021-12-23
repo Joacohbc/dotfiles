@@ -2,6 +2,7 @@
 alias inpc="sudo pacman -S"
 alias unpc="sudo pacman -Rns"
 alias uppc="sudo pacman -Syyu"
+alias pc="sudo pacman"
 
 alias yup="yay -Syu"
 alias yun="yay -Rns"

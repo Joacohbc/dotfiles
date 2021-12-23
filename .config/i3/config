@@ -207,11 +207,11 @@ for_window [class="^.*"] border pixel 2
 #-MIS ATAJOS DE TECLADO-#
 #-----------------------#
 
-#CapsLock
+#CapsLock (Ya en polybar)
 #Lo ejecuto con & y con un Sleep porque sino i3 ejecuta primero el script
 #y luego se activa el CapsLock, entoces simpre se cambia a activado y
 #muestra activado
-bindsym Caps_Lock exec "(sleep 0.2 && sh ~/Scripts/capsLock.sh) &"
+#bindsym Caps_Lock exec "(sleep 0.2 && sh ~/Scripts/capsLock.sh) &" 
 
 #Flameshot
 bindsym Shift+Print exec flameshot gui
@@ -249,7 +249,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 
 #Cambiar distribucion del teclado
-bindsym $mod+Shift+k exec "sh ~/Scripts/UStoES.sh"
+bindsym $mod+1k exec "sh ~/Scripts/UStoES.sh"
 
 #Activar Lockscreen
 #bindsym $mod+p exec betterlockscreen -l &

@@ -15,6 +15,7 @@ Need:
 8. brightnessctl - Bright control
 9. polybar with polybar-themes(theme 'hack', edited by me) - Bars
 10. dunst - Notification Manager
+11. tlp && powertop - Battery Savers
 
 Githubs that I use:
 - https://github.com/zbaylin/rofi-wifi-menu
@@ -22,7 +23,7 @@ Githubs that I use:
 - https://github.com/adi1090x/polybar-themes
 
 My tools:
-1. zsh with oh-my-zsh with theme "powerlevel10k" - Shell 
+1. zsh with oh-my-zsh(theme "powerlevel10k") - Shell 
 2. flameshot - Screenshots
 3. vivaldi - Browser
 4. alacritty - Terminal
@@ -30,4 +31,4 @@ My tools:
 6. htop && gtop - Task management
 7. xclip && copyq - Clipboard
 8. yay - Package management
-9. nano, VSCode && nvim - Text/Code Editor
+9. nano, nvim && VSCode - Text/Code Editor

@@ -24,3 +24,5 @@ alias ipc="curl -s http:/ifconfig.me | xclip -sel clip" #Copiar IP Publica al CB
 
 #Moverme entre directorios
 alias goProject="cd ~/Archivos/Colegio\ y\ Estudio/Z-Proyectos/"
+alias goScripts="cd ~/Scripts/"
+alias goDotfiles="cd ~/Archivos/dotfiles/dotfiles"

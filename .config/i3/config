@@ -193,7 +193,7 @@ bindsym $mod+r exec "sh ~/.config/i3/ResizeModeActivado.sh"
 #}
 
 #Color de bordecito de la ventana con focus
-client.focused #8e24aa #8e24aa #8e24aa #8e24aa
+client.focused #8700FF #8700FF #8700FF #8700FF
 
 #Gaps(espacio entre ventanas)
 gaps inner 3
@@ -201,7 +201,7 @@ gaps outer 1
 smart_gaps on
 
 #Borde de ventanas 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 #-----------------------#
 #-MIS ATAJOS DE TECLADO-#
@@ -211,7 +211,7 @@ for_window [class="^.*"] border pixel 2
 #Lo ejecuto con & y con un Sleep porque sino i3 ejecuta primero el script
 #y luego se activa el CapsLock, entoces simpre se cambia a activado y
 #muestra activado
-#bindsym Caps_Lock exec "(sleep 0.2 && sh ~/Scripts/capsLock.sh) &" 
+bindsym Caps_Lock exec "(sleep 0.2 && sh ~/Scripts/capsLock.sh) &" 
 
 #Flameshot
 bindsym Shift+Print exec flameshot gui
@@ -249,7 +249,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 
 #Cambiar distribucion del teclado
-bindsym $mod+1k exec "sh ~/Scripts/UStoES.sh"
+bindsym $mod+k exec "sh ~/Scripts/UStoES.sh"
 
 #Activar Lockscreen
 #bindsym $mod+p exec betterlockscreen -l &
@@ -279,4 +279,6 @@ exec "systemctl start --user dunst"
 #POLYBAR
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
 
-
+#Ahorrar bateria
+#systemctl enable tlp --now
+#systemctl enable --now thermald

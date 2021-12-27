@@ -252,10 +252,10 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 bindsym $mod+k exec "sh ~/Scripts/UStoES.sh"
 
 #Activar Lockscreen
-#bindsym $mod+p exec betterlockscreen -l &
+bindsym $mod+p exec betterlockscreen -l &
 
 #Actualizar LockScreen
-#bindsym $mod+Shift+p exec "sh ~/Scripts/actualizarWall.sh"
+bindsym $mod+Shift+p exec "sh ~/Scripts/actualizarWall.sh"
 
 #----------------------------#
 #-INICIO TODOS MIS PROGRAMAS-#

@@ -1,7 +1,7 @@
 # dotfiles
-My dotfiles, I use a Manjaro distro with a enviroment of Windows Manager with bars at top and bottom, with Rofi like a progrma launcher and some Keyboard shortcuts of clipboard, bright, volume, music, etc.
+My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars at the top and bottom, with Rofi as a program launcher and some keyboard shortcuts to control brightness, volume, music, etc. Also some command line aliases to improve my performance. 
 
-I use a laptop so I also use some script to save the batery.
+And I use a laptop so I also use some scripts to save the battery.
 
 # OS:
 - Manjaro Linux x86_64 - Arch Linux distro 
@@ -19,10 +19,14 @@ I use a laptop so I also use some script to save the batery.
 10. dunst - Notification Manager
 11. tlp && powertop - Battery Savers
 
-Githubs that I use configure my ststem:
+Githubs/Post that I use configure my ststem:
 - https://github.com/zbaylin/rofi-wifi-menu
 - https://github.com/AriosJentu/i3-polybar-config/
 - https://github.com/adi1090x/polybar-themes
+- https://www.reddit.com/r/linux/comments/a4o03z/get_the_best_out_of_you_battery_on_linux/
+- https://superuser.com/questions/959735/xrandr-to-set-display-to-use-single-monitor-even-if-you-have-another-monitor-co
+- https://github.com/Jguer/yay/issues/772
+- https://wiki.archlinux.org/title/List_of_applications
 
 # My tools:
 1. zsh with oh-my-zsh(theme "powerlevel10k") - Shell 
@@ -36,3 +40,5 @@ Githubs that I use configure my ststem:
 9. nano, nvim && VSCode - Text/Code Editor
 10. noisetorch - Suppresses Noise (https://github.com/lawl/NoiseTorch)
 11. goto - Movement between directories (https://github.com/Joacohbc/goto)
+12. trash-lic - Trash in command line (https://github.com/andreafrancia/trash-cli)
+13. Github Desktop - GUI Git Manager

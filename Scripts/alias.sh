@@ -22,10 +22,17 @@ alias copyf="xclip-copyfile" #Copiar archivo a CB
 alias pastef="xclip-pastefile" #Pegar archivo a CB
 alias ipc="curl -s http:/ifconfig.me | xclip -sel clip" #Copiar IP Publica al CB
 
-#Moverme entre directorios
-#alias goProject="cd ~/Archivos/Colegio\ y\ Estudio/Z-Proyectos/"
-#alias goScripts="cd ~/Scripts/"
-#alias goDotfiles="cd ~/Archivos/dotfiles/dotfiles"
+#Trash
+alias tput="trash-put"
+alias tlist="trash-list"
+alias trm="trash-rm"
+alias trestore="trash-restore"
+
+#Tar
+alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\""
+alias tarc="tar -cf"
+alias tarx="tar -xf"
 
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/gotoAlias.sh"
+alias cd='goto'

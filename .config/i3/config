@@ -277,7 +277,7 @@ exec_always betterlockscreen -u ~/Wallpaper/ &
 exec "systemctl start --user dunst"
 
 #POLYBAR
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --hack
+exec_always --no-startup-id $HOME/.config/polybar/hack/launch.sh
 
 #Ahorrar bateria
 #systemctl enable tlp --now

@@ -1,5 +1,7 @@
 # dotfiles
- My Dotfiles c:
+My dotfiles, I use a Manjaro distro with a enviroment of Windows Manager with bars at top and bottom, with Rofi like a progrma launcher and some Keyboard shortcuts of clipboard, bright, volume, music, etc.
+
+I use a laptop so I also use some script to save the batery.
 
 # OS:
 - Manjaro Linux x86_64 - Arch Linux distro 

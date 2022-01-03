@@ -1,7 +1,5 @@
 # dotfiles
-My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars at the top and bottom, with Rofi as a program launcher and some keyboard shortcuts to control brightness, volume, music, etc. Also some command line aliases to improve my performance. 
-
-And I use a laptop so I also use some scripts to save the battery.
+My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars at the top and bottom, with Rofi as a program launcher and some keyboard shortcuts to control brightness, volume, music, etc. Also some command line aliases to improve my performance. And I use a laptop so I also use some scripts to save the battery.
 
 # OS:
 - Manjaro Linux x86_64 - Arch Linux distro 
@@ -15,11 +13,11 @@ And I use a laptop so I also use some scripts to save the battery.
 6. nitrogen - Wallpapers
 7. playerctl - Music control
 8. brightnessctl - Bright control
-9. polybar with polybar-themes(theme 'hack', edited by me) - Bars
+9. polybar with polybar-themes(theme 'hack', with a few edited) - Bars
 10. dunst - Notification Manager
 11. tlp && powertop - Battery Savers
 
-Githubs/Post that I use configure my ststem:
+Githubs/Post that I use configure my linux:
 - https://github.com/zbaylin/rofi-wifi-menu
 - https://github.com/AriosJentu/i3-polybar-config/
 - https://github.com/adi1090x/polybar-themes
@@ -36,9 +34,9 @@ Githubs/Post that I use configure my ststem:
 5. ranger && nautilus - File Manager
 6. htop && gtop - Task management
 7. xclip && copyq - Clipboard
-8. yay - Package management
+8. yay - Package management(for AUR packages)
 9. nano, nvim && VSCode - Text/Code Editor
 10. noisetorch - Suppresses Noise (https://github.com/lawl/NoiseTorch)
-11. goto - Movement between directories (https://github.com/Joacohbc/goto)
-12. trash-lic - Trash in command line (https://github.com/andreafrancia/trash-cli)
+11. goto - Movement between directories in CLI (https://github.com/Joacohbc/goto)
+12. trash-cli - Trash in command line (https://github.com/andreafrancia/trash-cli)
 13. Github Desktop - GUI Git Manager

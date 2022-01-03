@@ -43,7 +43,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# start a terminal, default Alacritty
 bindsym $mod+Return exec alacritty
 
 # kill focused window
@@ -145,6 +145,25 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+
+#bar {
+#    font pango: FontAwesome 10
+#   position top
+#    status_command i3status-rs ~/.config/i3status-rust/config.toml
+#    colors {
+#       separator #666666
+#        background #222222
+#        statusline #ddddddexit
+
+#        focused_workspace #0088CC #0088CC #ffffff
+#        active_workspace #333333 #333333 #ffffff
+#        inactive_workspace #333333 #333333 #888888
+#        urgent_workspace #2f343a #900000 #ffffff
+#    }
+#}
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -173,25 +192,6 @@ mode "resize" {
 
 bindsym $mod+r exec "sh ~/.config/i3/ResizeModeActivado.sh"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-#bar {
-#    font pango: FontAwesome 10
-#   position top
-#    status_command i3status-rs ~/.config/i3status-rust/config.toml
-#    colors {
-#       separator #666666
-#        background #222222
-#        statusline #ddddddexit
-
-#        focused_workspace #0088CC #0088CC #ffffff
-#        active_workspace #333333 #333333 #ffffff
-#        inactive_workspace #333333 #333333 #888888
-#        urgent_workspace #2f343a #900000 #ffffff
-#    }
-#}
-
 #Color de bordecito de la ventana con focus
 client.focused #8700FF #8700FF #8700FF #8700FF
 
@@ -203,9 +203,14 @@ smart_gaps on
 #Borde de ventanas 
 for_window [class="^.*"] border pixel 3
 
-#-----------------------#
-#-MIS ATAJOS DE TECLADO-#
-#-----------------------#
+#Ventanas en workspaces
+assign [class="Code"] $ws1
+assign [class="Vivaldi-stable"] $ws2
+#assign [class="Alacritty"] $ws1
+
+###########################
+## MIS ATAJOS DE TECLADO ##
+###########################
 
 #CapsLock (Ya en polybar)
 #Lo ejecuto con & y con un Sleep porque sino i3 ejecuta primero el script
@@ -235,12 +240,6 @@ bindsym Ctrl+mod1+Left exec playerctl previous
 #Menu de Apagar/Gestion/Lock/Etc
 bindsym $mod+Escape exec "sh ~/Scripts/scriptsPolybar/menuApagado.sh &"
 
-#Filesystem
-bindsym $mod+Shift+f exec alacritty -e ranger
-
-#Tareas
-bindsym $mod+Shift+g exec alacritty -e htop
-
 #Recargar monitores
 bindsym $mod+Shift+m exec "sh ~/Scripts/recargarMonitores.sh"
 
@@ -257,12 +256,26 @@ bindsym $mod+p exec betterlockscreen -l &
 #Actualizar LockScreen
 bindsym $mod+Shift+p exec "sh ~/Scripts/actualizarWall.sh"
 
-#----------------------------#
-#-INICIO TODOS MIS PROGRAMAS-#
-#----------------------------#
+#####################
+## Abrir Alacritty ##
+#####################
+
+#Filesystem
+bindsym $mod+Shift+f exec alacritty -e ranger
+
+#Scripts
+bindsym $mod+Shift+s exec alacritty --working-directory /home/joaco/Scripts
+
+#Tareas
+bindsym $mod+Shift+g exec alacritty -e htop
+
+
+################################
+## INICIO TODOS MIS PROGRAMAS ##
+################################
 
 #Ejecutar gestor de clipboard
-exec copyq
+exec "copyq"
 
 #Poner fondo de pantalla
 exec "nitrogen --restore"
@@ -273,7 +286,7 @@ exec_always picom
 #Cargo imagenes del Lockscreen al cache
 exec_always betterlockscreen -u ~/Wallpaper/ &
 
-#Dunst
+#Dunst (Notificaciones)
 exec "systemctl start --user dunst"
 
 #POLYBAR

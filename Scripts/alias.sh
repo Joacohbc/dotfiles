@@ -34,5 +34,5 @@ alias tarc="tar -cf"
 alias tarx="tar -xf"
 
 #Comando goto
-source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/gotoAlias.sh"
-alias cd='goto'
+source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
+

@@ -6,6 +6,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 # Package that I use:
 1. i3gaps(i3wm) - Windows Manager
+    - xprop - To know the class of a Windows
+    - xorg-xev (or only xev) - To know the "name" of a key of the keyboard
 2. betterlockscreen - Screen Lock
 3. xrandr - Configure Monitors
 4. rofi - Launcher and Windows Movement Assistant
@@ -25,6 +27,9 @@ Githubs/Post that I use configure my linux:
 - https://superuser.com/questions/959735/xrandr-to-set-display-to-use-single-monitor-even-if-you-have-another-monitor-co
 - https://github.com/Jguer/yay/issues/772
 - https://wiki.archlinux.org/title/List_of_applications
+- https://www.google.com/search?q=Invalid%20blur%20method%20picom
+- https://github.com/davatorium/rofi/issues/1009
+- https://stsewd.dev/es/posts/neovim-installation-configuration/
 
 # My tools:
 1. zsh with oh-my-zsh(theme "powerlevel10k") - Shell 

@@ -281,7 +281,7 @@ exec "copyq"
 exec "nitrogen --restore"
 
 #Poner trasparencia
-exec_always picom
+exec_always "sh ~/Scripts/picom.sh"
 
 #Cargo imagenes del Lockscreen al cache
 exec_always betterlockscreen -u ~/Wallpaper/ &

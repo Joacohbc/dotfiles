@@ -12,10 +12,24 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Listo los monitores y abro una sesion de polybar para cada
 # monitor activo, desde el mismo archivo de conf
+
+MONITOR_PRIMARIO="eDP-1"
+
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar -q top -c "$DIR"/config.ini &
-    MONITOR=$m polybar -q bottom -c "$DIR"/config.ini &  
-    notify-send -i low "Polybar activado en $m" -t 2500
+
+    if [ "$m" == "$MONITOR_PRIMARIO" ]; then
+        MONITOR=$m polybar -q top -c "$DIR"/config.ini &
+        MONITOR=$m polybar -q bottom -c "$DIR"/config.ini &  
+        notify-send -i low "Polybar activado en $m" -t 2500
+    else
+        MONITOR=$m polybar -q top -c "$DIR"/configSegundoMonitor.ini &
+        MONITOR=$m polybar -q bottom -c "$DIR"/configSegundoMonitor.ini &  
+        notify-send -i low "Polybar activado en $m" -t 2500
+    fi
+
 done
+
+
+
 
 

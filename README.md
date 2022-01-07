@@ -22,7 +22,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 10. dunst - Notification Manager
 11. tlp && powertop - Battery Savers
 
-Githubs/Post that I use configure my linux:
+Githubs/Post/URL that I use configure my linux:
 
 - <https://github.com/zbaylin/rofi-wifi-menu>
 - <https://github.com/AriosJentu/i3-polybar-config/>
@@ -34,6 +34,12 @@ Githubs/Post that I use configure my linux:
 - <https://www.google.com/search?q=Invalid%20blur%20method%20picom>
 - <https://github.com/davatorium/rofi/issues/1009>
 - <https://stsewd.dev/es/posts/neovim-installation-configuration/>
+- <https://forum.archlabslinux.com/t/solved-polybar-mpd-module-limit-label-length/270/3>
+- <https://github.com/polybar/polybar/issues/2177>
+- <https://www.nerdfonts.com/cheat-sheet>
+- <https://github.com/polybar/polybar/issues/763>
+- <https://www.howtogeek.com/269509/how-to-run-two-or-more-terminal-commands-at-once-in-linux/>
+- <https://noviello.it/es/como-matar-o-detener-un-proceso-en-linux/>
 
 ## My tools
 
@@ -50,3 +56,5 @@ Githubs/Post that I use configure my linux:
 11. goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
 12. trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
 13. Github Desktop - GUI Git Manager
+14. udiskie - Automount disks
+15. nm-applet - Network Manager Tray

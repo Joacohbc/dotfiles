@@ -101,9 +101,9 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Code"
-set $ws2 "2: Navegador"
-set $ws3 "3: Musica"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -205,8 +205,8 @@ for_window [class="^.*"] border pixel 3
 
 #Ventanas en workspaces
 assign [class="Code"] $ws1
-assign [class="Vivaldi-stable"] $ws2
 #assign [class="Alacritty"] $ws1
+assign [class="Vivaldi-stable"] $ws2
 
 ###########################
 ## MIS ATAJOS DE TECLADO ##
@@ -216,7 +216,7 @@ assign [class="Vivaldi-stable"] $ws2
 #Lo ejecuto con & y con un Sleep porque sino i3 ejecuta primero el script
 #y luego se activa el CapsLock, entoces simpre se cambia a activado y
 #muestra activado
-bindsym Caps_Lock exec "(sleep 0.2 && sh ~/Scripts/capsLock.sh) &" 
+bindsym Caps_Lock exec "(sleep 0.2; sh ~/Scripts/capsLock.sh) &" 
 
 #Flameshot
 bindsym Shift+Print exec flameshot gui
@@ -275,10 +275,13 @@ bindsym $mod+Shift+g exec alacritty -e htop
 ################################
 
 #Ejecutar gestor de clipboard
-exec "copyq"
+exec_always "copyq"
 
 #Poner fondo de pantalla
-exec "nitrogen --restore"
+exec_always "nitrogen --restore"
+
+#Ejecutar flameshot
+exec_always "flameshoy"
 
 #Poner trasparencia
 exec_always "sh ~/Scripts/picom.sh"
@@ -288,6 +291,10 @@ exec_always betterlockscreen -u ~/Wallpaper/ &
 
 #Dunst (Notificaciones)
 exec "systemctl start --user dunst"
+
+#Undiskie para auto montar discos
+#Primero detengo todos los procesos de undiskie y luego lo ejecuto de vuleta
+exec_always "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
 
 #POLYBAR
 exec_always --no-startup-id $HOME/.config/polybar/hack/launch.sh

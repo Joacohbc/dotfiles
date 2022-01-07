@@ -10,6 +10,12 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch the bar
-polybar -q top -c "$DIR"/config.ini &
-polybar -q bottom -c "$DIR"/config.ini &
+# Listo los monitores y abro una sesion de polybar para cada
+# monitor activo, desde el mismo archivo de conf
+for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar -q top -c "$DIR"/config.ini &
+    MONITOR=$m polybar -q bottom -c "$DIR"/config.ini &  
+    notify-send -i low "Polybar activado en $m" -t 2500
+done
+
+

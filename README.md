@@ -40,6 +40,8 @@ Githubs/Post/URL that I use configure my linux:
 - <https://github.com/polybar/polybar/issues/763>
 - <https://www.howtogeek.com/269509/how-to-run-two-or-more-terminal-commands-at-once-in-linux/>
 - <https://noviello.it/es/como-matar-o-detener-un-proceso-en-linux/>
+- <https://www.nerdfonts.com/cheat-sheet>
+- <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
 
 ## My tools
 
@@ -58,3 +60,5 @@ Githubs/Post/URL that I use configure my linux:
 13. Github Desktop - GUI Git Manager
 14. udiskie - Automount disks
 15. nm-applet - Network Manager Tray
+16. FiraCode Nerd Font - Font of VSCode (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+17. testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)

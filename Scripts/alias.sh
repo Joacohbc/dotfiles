@@ -12,6 +12,7 @@ alias yin="yay -S"
 alias c="clear"
 alias x="exit"
 alias pgg="ping 8.8.8.8"
+alias vld="vivaldi-stable"
 
 #ClipBoard(CB)
 alias pwdc="pwd | xclip -sel c" #Directorio actul al CB
@@ -27,6 +28,7 @@ alias tput="trash-put"
 alias tlist="trash-list"
 alias trm="trash-rm"
 alias trestore="trash-restore"
+alias rm="trash-put"
 
 #Tar
 alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\""
@@ -36,3 +38,29 @@ alias tarx="tar -xf"
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
+#Para Golang
+go-run() {
+
+    #Cree el directorio testing
+    mkdir -p testing
+
+    #Si falla, que muestre error y retorne
+    if [ $? -eq 1 ]; then 
+        echo "Error al crear carpeta de testing"
+        return
+    fi
+
+    OUTPUT="./testing/main.test"
+    if [ $# -eq 0 ]; then
+        go build -o $OUTPUT ./*.go
+    else
+        go build -o $OUTPUT $@
+    fi
+    if [ $? -eq 0 ]; then 
+        ./$OUTPUT
+    else 
+        echo "Error al compilar el binario"
+    fi
+}
+
+alias gor="go-run"

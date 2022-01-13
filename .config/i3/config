@@ -207,6 +207,7 @@ for_window [class="^.*"] border pixel 3
 assign [class="Code"] $ws1
 #assign [class="Alacritty"] $ws1
 assign [class="Vivaldi-stable"] $ws2
+assign [class="discord"] $ws5
 
 ###########################
 ## MIS ATAJOS DE TECLADO ##
@@ -269,7 +270,6 @@ bindsym $mod+Shift+s exec alacritty --working-directory /home/joaco/Scripts
 #Tareas
 bindsym $mod+Shift+g exec alacritty -e htop
 
-
 ################################
 ## INICIO TODOS MIS PROGRAMAS ##
 ################################
@@ -281,7 +281,7 @@ exec_always "copyq"
 exec_always "nitrogen --restore"
 
 #Ejecutar flameshot
-exec_always "flameshoy"
+exec_always "flameshot"
 
 #Poner trasparencia
 exec_always "sh ~/Scripts/picom.sh"
@@ -298,6 +298,9 @@ exec_always "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
 
 #POLYBAR
 exec_always --no-startup-id $HOME/.config/polybar/hack/launch.sh
+
+#Apago el Bluetooh 
+exec "bluetooth off
 
 #Ahorrar bateria
 #systemctl enable tlp --now

@@ -1,12 +1,12 @@
 #Paquetes
-alias inpc="sudo pacman -S"
-alias unpc="sudo pacman -Rns"
-alias uppc="sudo pacman -Syyu"
+#alias inpc="sudo pacman -S"
+#alias unpc="sudo pacman -Rns"
+#alias uppc="sudo pacman -Syyu"
 alias pc="sudo pacman"
 
-alias yup="yay -Syu"
-alias yun="yay -Rns"
-alias yin="yay -S"
+#alias yup="yay -Syu"
+#alias yun="yay -Rns"
+#alias yin="yay -S"
 
 #Generales
 alias c="clear"
@@ -38,7 +38,7 @@ alias tarx="tar -xf"
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
-#Para Golang
+#Para compilar y ejecutar codigo Golang
 go-run() {
 
     #Cree el directorio testing
@@ -51,11 +51,16 @@ go-run() {
     fi
 
     OUTPUT="./testing/main.test"
+    
+    #Si no hay argumentos que compile todos ".go"
     if [ $# -eq 0 ]; then
         go build -o $OUTPUT ./*.go
     else
+    #Sino solo los que se les envie
         go build -o $OUTPUT $@
     fi
+
+    #Si compilo correctamente
     if [ $? -eq 0 ]; then 
         ./$OUTPUT
     else 
@@ -63,4 +68,7 @@ go-run() {
     fi
 }
 
-alias gor="go-run"
+#Ir a la carpeta con "goto" y abrir VSCode ahi
+goc() {
+    goto $@; code ./
+}

@@ -53,13 +53,14 @@ Githubs/Post/URL that I use configure my linux:
 6. htop && gtop - Task management
 7. xclip && copyq - Clipboard
 8. yay - Package management(for AUR packages)
-9. nano, nvim && VSCode - Text/Code Editor
-10. noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
-11. goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
-12. trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
-13. Github Desktop - GUI Git Manager
-14. udiskie - Automount disks
-15. nm-applet - Network Manager Tray
-16. FiraCode Nerd Font - Font of VSCode (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+9. nano && nvim - Console Editor
+10. VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+11. noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
+12. goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
+13. trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
+14. Github Desktop - GUI Git Manager
+15. udiskie - Automount disks
+16. nm-applet - Network Manager Tray
 17. testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
 18. neofetch - CLI System Information Tool
+19. lxappearance && kvantum - Theme Chooser - My themes: Adawita-dark && Matchama-Dark-Aliz

@@ -218,6 +218,7 @@ assign [class="Code"] $ws1
 #assign [class="Alacritty"] $ws1
 assign [class="Vivaldi-stable"] $ws2
 assign [class="discord"] $ws5
+assign [class="Org.gnome.Nautilus"] $ws6
 
 ###########################
 ## MIS ATAJOS DE TECLADO ##
@@ -267,15 +268,12 @@ bindsym $mod+p exec betterlockscreen -l &
 #Actualizar LockScreen
 bindsym $mod+Shift+p exec "sh ~/Scripts/actualizarWall.sh"
 
+#Filesystem
+bindsym $mod+Shift+f exec nautilus
+
 #####################
 ## Abrir Alacritty ##
 #####################
-
-#Filesystem
-bindsym $mod+Shift+f exec alacritty -e ranger
-
-#Scripts
-bindsym $mod+Shift+s exec alacritty --working-directory /home/joaco/Scripts
 
 #Tareas
 bindsym $mod+Shift+g exec alacritty -e htop

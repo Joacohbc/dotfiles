@@ -308,8 +308,12 @@ exec_always "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
 exec_always --no-startup-id $HOME/.config/polybar/hack/launch.sh
 
 #Apago el Bluetooh 
-exec "bluetooth off
+exec "bluetooth off"
 
 #Ahorrar bateria
 #systemctl enable tlp --now
 #systemctl enable --now thermald
+
+
+#Para las clases virtaules
+exec zoom

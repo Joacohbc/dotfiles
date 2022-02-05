@@ -6,25 +6,25 @@ player_titles=$(playerctl metadata title 2> /dev/null)
 
 playerctl metadata title &> /dev/null #para que no tire el resultado al la salida
 
-#Si no tiene artista
+#Si no tiene titulo
 if [ "$?" == "1" ]; then
 	if [ "$player_status" = "Playing" ]; then
-		echo "%{F#FFF} `playerctl status` "
+		echo " `playerctl status` "
 	elif [ "$player_status" = "Paused" ]; then
-		echo "%{F#FFF} `playerctl status`"
+		echo " `playerctl status`"
 	elif [ "$player_status" = "Stopped" ]; then
-		echo "%{F#FFF} `playerctl status`"
+		echo " `playerctl status`"
 	else
 		echo ""
 	fi
 else
-#Si tiene artista
+#Si tiene titulo
 	if [ "$player_status" = "Playing" ]; then
-		echo "%{F#FFF} $player_titles" #$player_artist - NO MOSTRAR ARTISTA
+		echo " $player_titles"
 	elif [ "$player_status" = "Paused" ]; then
-		echo "%{F#FFF} $player_titles" #$player_artist - NO MOSTRAR ARTISTA
+		echo " $player_titles"
 	elif [ "$player_status" = "Stopped" ]; then
-		echo "%{F#FFF} $player_titles" #$player_artist - NO MOSTRAR ARTISTA
+		echo " $player_titles"
 	else
 		echo ""
 	fi

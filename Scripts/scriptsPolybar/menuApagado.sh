@@ -12,12 +12,12 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi" 
 
 #Opciones de apagado
-lock="1-  Lock"
-updateLock="2-  Update Lockscreen "
-suspend="3-  Sleep"
-shutdown="4-  Shutdown"
-logout="5-  Logout"
-reboot="6-  Restart"
+lock="1-  Lock"
+updateLock="2-  Update Lockscreen "
+suspend="3- 鈴 Sleep"
+shutdown="4-  Shutdown"
+logout="5-  Logout"
+reboot="6- 拉 Restart"
 
 # Confirmation
 confirm_exit() {

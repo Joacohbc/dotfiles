@@ -215,10 +215,10 @@ for_window [class="^.*"] border pixel 3
 
 #Ventanas en workspaces
 assign [class="Code"] $ws1
-#assign [class="Alacritty"] $ws1
 assign [class="Vivaldi-stable"] $ws2
-assign [class="discord"] $ws5
-assign [class="Org.gnome.Nautilus"] $ws6
+assign [class="discord"] $ws4
+assign [class="zoom.*"] $ws4
+assign [class="Org.gnome.Nautilus"] $ws5
 
 ###########################
 ## MIS ATAJOS DE TECLADO ##
@@ -260,7 +260,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 
 #Cambiar distribucion del teclado
-bindsym $mod+k exec "sh ~/Scripts/UStoES.sh"
+bindsym mod1+space exec "sh ~/Scripts/UStoES.sh"
 
 #Activar Lockscreen
 bindsym $mod+p exec betterlockscreen -l &
@@ -316,4 +316,4 @@ exec "bluetooth off"
 
 
 #Para las clases virtaules
-exec zoom
+#exec zoom

@@ -13,6 +13,7 @@ alias c="clear"
 alias x="exit"
 alias pgg="ping 8.8.8.8"
 alias vld="vivaldi-stable"
+alias fixtime="sudo ntpd -qg"
 
 #ClipBoard(CB)
 alias pwdc="pwd | xclip -sel c" #Directorio actul al CB

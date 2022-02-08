@@ -283,16 +283,16 @@ bindsym $mod+Shift+g exec alacritty -e htop
 ################################
 
 #Ejecutar gestor de clipboard
-exec_always "copyq"
+exec "copyq"
 
 #Poner fondo de pantalla
-exec_always "nitrogen --restore"
+exec "nitrogen --restore"
 
 #Ejecutar flameshot
-exec_always "flameshot"
+exec "flameshot"
 
 #Poner trasparencia
-exec_always "sh ~/Scripts/picom.sh"
+exec "sh ~/Scripts/picom.sh"
 
 #Cargo imagenes del Lockscreen al cache
 exec_always betterlockscreen -u ~/Wallpaper/ &
@@ -301,7 +301,7 @@ exec_always betterlockscreen -u ~/Wallpaper/ &
 exec "systemctl start --user dunst"
 
 #Undiskie para auto montar discos
-#Primero detengo todos los procesos de undiskie y luego lo ejecuto de vuleta
+#Primero detengo todos los procesos de undiskie y luego lo ejecuto de vuelta
 exec_always "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
 
 #POLYBAR
@@ -310,10 +310,23 @@ exec_always --no-startup-id $HOME/.config/polybar/hack/launch.sh
 #Apago el Bluetooh 
 exec "bluetooth off"
 
-#Ahorrar bateria
-#systemctl enable tlp --now
-#systemctl enable --now thermald
+#Arreglar el horarios
+# Como no se puede ejecutar comandos sudo desde i3
+# Para arreglar la hora uso crontab desde el usuario 
+# root con:
+# "@reboot ntpd -qg"
+# 
+# Para habilitar cron (cronie) al inicio uso:
+# sudo systemctl enable cronie
 
+
+#Ahorrar bateria
+# Dejo los servicios para ahorrar bateria 
+# cuando lo necesito y los uso con scripts:
+#
+# sudo systemctl enable tlp --now
+# sudo systemctl enable --now thermald
+# sudo powertop
 
 #Para las clases virtaules
 #exec zoom

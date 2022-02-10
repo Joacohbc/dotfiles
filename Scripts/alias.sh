@@ -39,6 +39,11 @@ alias tarx="tar -xf"
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
+#Ir a la carpeta con "goto" y abrir VSCode ahi
+goc() {
+    goto $@;code ./
+}
+
 #Para compilar y ejecutar codigo Golang
 go-run() {
 
@@ -61,6 +66,9 @@ go-run() {
         go build -o $OUTPUT $@
     fi
 
+    #Le doy los permisos
+    chmod +x $OUTPUT
+    
     #Si compilo correctamente
     if [ $? -eq 0 ]; then 
         ./$OUTPUT
@@ -69,7 +77,4 @@ go-run() {
     fi
 }
 
-#Ir a la carpeta con "goto" y abrir VSCode ahi
-goc() {
-    goto $@; code ./
-}
+

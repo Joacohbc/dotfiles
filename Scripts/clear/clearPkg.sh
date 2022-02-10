@@ -8,4 +8,3 @@ sudo pacman -Scc
 
 #Limpia el cache de yay
 sudo yay -Sc
-

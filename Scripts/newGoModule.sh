@@ -62,7 +62,7 @@ chmod +x ./test.sh
 #Creo make.sh
 touch make.sh
 
-echo "BUILD=\"./bin/\$PACKAGE.bin\"
+echo "BUILD=\"./bin/$PACKAGE.bin\"
 
 go build -o \$BUILD ./src/*.go
 
@@ -71,7 +71,7 @@ if [ "$?" == "0" ]; then
     echo \"El binario fue creado con exito\"
 fi" > make.sh
 
-chmod +x ./test.sh
+chmod +x ./make.sh
 
 #########################
 #-Crear repositorio Git-#

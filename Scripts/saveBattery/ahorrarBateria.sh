@@ -74,18 +74,31 @@ if [ $? == 0 ]; then
 
     if [ $? == 0 ]; then
         exito "Se desactivo el monitor de HDMI"
+    else
+        exit 1
     fi 
     
     xrandr --output $mon1 --auto
     if [ $? == 0 ]; then
         exito "Se activa solo un monitor"
+    else
+        exit 1
     fi 
 
+    #Reiniciar Polybar
+    ~/.config/polybar/hack/launch.sh &>> /dev/null
+    if [ $? == 0 ]; then
+        exito "Se recargo el Polybar"
+    else
+        exit 1
+    fi
+
+    #Reiniciar Fondo de pantalla
     nitrogen --restore &>> /dev/null
 fi
 
 #Bajo el brillo
-brightnessctl set 10% &>> /dev/null
+brightnessctl set 15% &>> /dev/null
 if [ $? == 0 ]; then
-    exito "Se puso el brillo en 10"
+    exito "Se bajo el brillo"
 fi

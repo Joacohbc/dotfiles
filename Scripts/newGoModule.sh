@@ -45,30 +45,51 @@ mv ./main.go ./src/main.go
 #-Crear script de test.sh y make.sh-#
 #####################################
 
+#
 #Creo test.sh
+#
 touch test.sh
 
 echo "BUILD=\"./testing/$PACKAGE.test\"
 
-go build -o \$BUILD ./src/*.go
+#Windows
+GOOS=windows GOARCH=amd64 go build -o \"\$BUILD.exe\" ./src/*.go
+if [ \"\$?\" == \"0\" ]; then 
+    chmod +x \"\$BUILD.exe\"
+    echo \"El binario de testing de Windows x64 fue creado con exito\"
+fi
 
-if [ "$?" == "0" ]; then 
-    chmod +x \$BUILD
-    \$BUILD
+#Linux
+GOOS=linux GOARCH=amd64 go build -o \"\$BUILD.bin\" ./src/*.go
+if [ \"\$?\" == \"0\" ]; then 
+    chmod +x \"\$BUILD.bin\"
+    echo \"El binario de testing de Linux x64 fue creado con exito\"
+
+    #Y ejecuto el Build
+    \$BUILD.bin
 fi" > test.sh
 
 chmod +x ./test.sh
 
+#
 #Creo make.sh
+#
 touch make.sh
 
-echo "BUILD=\"./bin/$PACKAGE.bin\"
+echo "BUILD=\"./bin/$PACKAGE\"
 
-go build -o \$BUILD ./src/*.go
+#Windows
+GOOS=windows GOARCH=amd64 go build -o \"\$BUILD.exe\" ./src/*.go
+if [ \"\$?\" == \"0\" ]; then 
+    chmod +x \"\$BUILD.exe\"
+    echo \"El binario de Windows x64 fue creado con exito\"
+fi
 
-if [ "$?" == "0" ]; then 
-    chmod +x \$BUILD
-    echo \"El binario fue creado con exito\"
+#Linux
+GOOS=linux GOARCH=amd64 go build -o \"\$BUILD.bin\" ./src/*.go
+if [ \"\$?\" == \"0\" ]; then 
+    chmod +x \"\$BUILD.bin\"
+    echo \"El binario de Linux x64 fue creado con exito\"
 fi" > make.sh
 
 chmod +x ./make.sh
@@ -77,8 +98,23 @@ chmod +x ./make.sh
 #-Crear repositorio Git-#
 #########################
 
-git init ./
-git add -A
+echo ""
+echo "¿Iniciar repositorio Git? (y/any)"
+read op
+
+if [ "$op" == "y" ]; then
+    git init ./
+
+    touch .gitignore
+
+    echo "
+    testing/*
+    *.sh
+    .vscode/*
+    " > .gitignore
+
+    git add -A
+fi
 
 #################################
 #-Preguntar si abrir con VsCode-#
@@ -90,6 +126,5 @@ echo "¿Abrir \"./$PACKAGE\" en Visual Studio Code? (y/any)"
 read op
 
 if [ "$op" == "y" ]; then
-    #cd ./$PACKAGE
     code ./ 
 fi

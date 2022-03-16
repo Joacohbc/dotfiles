@@ -36,45 +36,20 @@ alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\""
 alias tarc="tar -cf"
 alias tarx="tar -xf"
 
-#Comando goto
-source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
 #Ir a la carpeta con "goto" y abrir VSCode ahi
 goc() {
     goto $@;code ./
 }
 
-#Para compilar y ejecutar codigo Golang
-go-run() {
 
-    #Cree el directorio testing
-    mkdir -p testing
+#Comando goto
+source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
-    #Si falla, que muestre error y retorne
-    if [ $? -eq 1 ]; then 
-        echo "Error al crear carpeta de testing"
-        return
-    fi
-
-    OUTPUT="./testing/main.test"
-    
-    #Si no hay argumentos que compile todos ".go"
-    if [ $# -eq 0 ]; then
-        go build -o $OUTPUT ./*.go
-    else
-    #Sino solo los que se les envie
-        go build -o $OUTPUT $@
-    fi
-
-    #Le doy los permisos
-    chmod +x $OUTPUT
-    
-    #Si compilo correctamente
-    if [ $? -eq 0 ]; then 
-        ./$OUTPUT
-    else 
-        echo "Error al compilar el binario"
-    fi
+source "/home/joaco/Scripts/varsSsh.sh"
+scp2server() {
+    scp -P $PORT_MY_SSH $@ $IP_MY_SSH:/home/joaco/Temp
 }
+
 
 

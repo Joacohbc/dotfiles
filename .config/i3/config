@@ -271,7 +271,8 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
 
 #Cambiar distribucion del teclado
-bindsym mod1+space exec "sh ~/Scripts/UStoES.sh"
+bindsym mod1+space exec "sh ~/Scripts/keyboard/UStoESTime.sh"
+bindsym Ctrl+mod1+space exec "sh ~/Scripts/keyboard/UStoES.sh"
 
 #Activar Lockscreen
 bindsym $mod+p exec betterlockscreen -l &
@@ -341,5 +342,5 @@ exec "bluetooth off"
 
 #Para las clases virtaules
 exec zoom
-exec discord
+#exec discord
 exec vivaldi-stable

@@ -65,4 +65,3 @@ Githubs/Post/URL that I use configure my linux:
 17. testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
 18. neofetch - CLI System Information Tool
 19. lxappearance && kvantum - Theme Chooser - My themes: Adawita-dark && Matchama-Dark-Aliz
-20. bmenu - Menu CLI

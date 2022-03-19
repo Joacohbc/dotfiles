@@ -22,7 +22,7 @@ alias cbil="xclip -sel clip" #Meter en CB de manera larga
 alias cbi="sh ~/Scripts/copiarAClipboard.sh" #Meter en CB manera corta
 alias copyf="xclip-copyfile" #Copiar archivo a CB
 alias pastef="xclip-pastefile" #Pegar archivo a CB
-alias ipc="curl -s http:/ifconfig.me | xclip -sel clip" #Copiar IP Publica al CB
+alias ipc="go-ip public | xclip -sel clip" #Copiar IP Publica al CB
 
 #Trash
 alias tput="trash-put"
@@ -41,7 +41,6 @@ alias tarx="tar -xf"
 goc() {
     goto $@;code ./
 }
-
 
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"

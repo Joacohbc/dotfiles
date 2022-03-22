@@ -4,7 +4,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 ## OS
 
-- Manjaro Linux x86_64 - Arch Linux distro
+- Manjaro Linux x86_64 (Gnome Edition) - Arch Linux distro
 
 ## Package that I use
 
@@ -65,3 +65,5 @@ Githubs/Post/URL that I use configure my linux:
 17. testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
 18. neofetch - CLI System Information Tool
 19. lxappearance && kvantum - Theme Chooser - My themes: Adawita-dark && Matchama-Dark-Aliz
+20. VirtualBox && Vagrant - Virtualization
+21. Ventoy - Create a booteable USB

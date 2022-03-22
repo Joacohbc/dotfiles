@@ -49,6 +49,3 @@ source "/home/joaco/Scripts/varsSsh.sh"
 scp2server() {
     scp -P $PORT_MY_SSH $@ $IP_MY_SSH:/home/joaco/Temp
 }
-
-
-

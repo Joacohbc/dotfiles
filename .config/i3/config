@@ -213,10 +213,14 @@ smart_gaps on
 #Borde de ventanas 
 for_window [class="^.*"] border pixel 3
 
+##############################
+## DONDE IRAN LOS PROGRAMAS ##
+##############################
+
 #Ventanas en workspaces
 assign [class="Code"] $ws1
-assign [class="Vivaldi-stable"] $ws2
-assign [class="Google-chrome"] $ws2
+#assign [class="Vivaldi-stable"] $ws2
+#assign [class="Google-chrome"] $ws2
 assign [class="discord"] $ws4
 assign [class="zoom.*"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws5
@@ -244,7 +248,9 @@ bindsym Caps_Lock exec "(sleep 0.2; sh ~/Scripts/capsLock.sh) &"
 #Flameshot
 bindsym Shift+Print exec flameshot gui
 bindsym Shift+Insert exec flameshot gui
-bindsym mod1+g exec flameshot full -c
+
+bindsym Ctrl+Print exec flameshot screen -n 0 -c #Camptura de pantalla al monitor actual
+bindsym Ctrl+Insert exec flameshot screen -n 0 -c #Camptura de pantalla al monitor actual
 
 #Rofi
 bindsym $mod+d exec rofi -show drun
@@ -341,6 +347,6 @@ exec "bluetooth off"
 # sudo powertop
 
 #Para las clases virtaules
-exec zoom
-#exec discord
+#exec zoom
+#exec droidcam
 exec vivaldi-stable

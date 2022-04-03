@@ -39,13 +39,14 @@ alias tarx="tar -xf"
 
 #Ir a la carpeta con "goto" y abrir VSCode ahi
 goc() {
-    goto $@;code ./
+    goto $@;code ./;exit
 }
 
 #Comando goto
 source "/home/joaco/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
 source "/home/joaco/Scripts/varsSsh.sh"
+
 scp2server() {
     scp -P $PORT_MY_SSH $@ $IP_MY_SSH:/home/joaco/Temp
 }

@@ -4,10 +4,6 @@
 #alias uppc="sudo pacman -Syyu"
 alias pc="sudo pacman"
 
-#alias yup="yay -Syu"
-#alias yun="yay -Rns"
-#alias yin="yay -S"
-
 #Generales
 alias c="clear"
 alias x="exit"
@@ -16,30 +12,40 @@ alias vld="vivaldi-stable"
 alias fixtime="sudo ntpd -qg"
 
 #ClipBoard(CB)
+
+#Lo que se le pase como parametros los manda al clipboard
+cbi(){
+    echo "$@" | xclip -sel c 
+}
+alias cbil="xclip -sel c" #Meter en CB de manera larga con un "|"
+alias cbo="xclip -o -sel clip" #Mostrar ultima CB
+
 alias pwdc="pwd | xclip -sel c" #Directorio actul al CB
-alias cbo="xclip -o -sel clip" #Mostrar CB
-alias cbil="xclip -sel clip" #Meter en CB de manera larga
-alias cbi="sh ~/Scripts/copiarAClipboard.sh" #Meter en CB manera corta
-alias copyf="xclip-copyfile" #Copiar archivo a CB
+alias cmc="fc -ln -1 | xclip -sel c" #Copiar ultimo comando al CB
+alias copyf="xclip-copyfile" #Copiar archivo a CB#
 alias pastef="xclip-pastefile" #Pegar archivo a CB
 alias ipc="go-ip public | xclip -sel clip" #Copiar IP Publica al CB
 
 #Trash
-alias tput="trash-put"
 alias tlist="trash-list"
 alias trm="trash-rm"
 alias trestore="trash-restore"
 alias rm="trash-put"
 
 #Tar
-alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\""
-alias tarc="tar -cf"
-alias tarx="tar -xf"
-
+alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\"" #Mostrar info como hacer un tar
+alias tarc="tar -cf" #Crear tar
+alias tarx="tar -xf" #Deshacer tar
 
 #Ir a la carpeta con "goto" y abrir VSCode ahi
 goc() {
-    goto $@;code ./;exit
+    goto $@
+    if [[ "$?" == "0" ]]; then
+        code ./
+        exit 0
+    else 
+        echo "$OUTPUT"
+    fi
 }
 
 #Comando goto

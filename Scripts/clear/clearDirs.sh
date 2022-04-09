@@ -37,6 +37,6 @@ echo "¿Borrar carpeta Descargas y Temp? (y/any)"
 read op
 
 if [ "$op" == "y" ]; then
-    clearDir ~/Descargas
-    clearDir ~/Temp
+    clearDir $HOME/Descargas
+    clearDir $HOME/Temp
 fi

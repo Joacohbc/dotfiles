@@ -61,7 +61,7 @@ case $chosen in
 		betterlockscreen -l &
         ;;
 	$updateLock)
-		sh ~/Scripts/actualizarWall.sh
+		sh $HOME/Scripts/actualizarWall.sh
 		;;
     $suspend)
 		mpc -q pause

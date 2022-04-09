@@ -86,7 +86,7 @@ if [ $? == 0 ]; then
     fi 
 
     #Reiniciar Polybar
-    ~/.config/polybar/hack/launch.sh &>> /dev/null
+    $HOME/.config/polybar/hack/launch.sh &>> /dev/null
     if [ $? == 0 ]; then
         exito "Se recargo el Polybar"
     else

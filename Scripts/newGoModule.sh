@@ -18,7 +18,6 @@ cd "./"$PACKAGE
 #Creo los paquetes necesarios
 mkdir ./bin
 mkdir ./src
-mkdir ./testing
 
 #############################
 #-Crear go module y main.go-#
@@ -41,35 +40,9 @@ func main() {
 
 mv ./main.go ./src/main.go
 
-#####################################
-#-Crear script de test.sh y make.sh-#
-#####################################
-
-#
-#Creo test.sh
-#
-touch test.sh
-
-echo "BUILD=\"./testing/$PACKAGE.test\"
-
-#Windows
-GOOS=windows GOARCH=amd64 go build -o \"\$BUILD.exe\" ./src/*.go
-if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD.exe\"
-    echo \"El binario de testing de Windows x64 fue creado con exito\"
-fi
-
-#Linux
-GOOS=linux GOARCH=amd64 go build -o \"\$BUILD.bin\" ./src/*.go
-if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD.bin\"
-    echo \"El binario de testing de Linux x64 fue creado con exito\"
-
-    #Y ejecuto el Build
-    \$BUILD.bin
-fi" > test.sh
-
-chmod +x ./test.sh
+########################
+#-Crear script make.sh-#
+########################
 
 #
 #Creo make.sh
@@ -85,12 +58,20 @@ if [ \"\$?\" == \"0\" ]; then
     echo \"El binario de Windows x64 fue creado con exito\"
 fi
 
-#Linux
+#Linux x64
 GOOS=linux GOARCH=amd64 go build -o \"\$BUILD.bin\" ./src/*.go
 if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD.bin\"
+    chmod +x \"\$BUILD\"\"64.bin\"
     echo \"El binario de Linux x64 fue creado con exito\"
-fi" > make.sh
+fi
+
+#Linux
+GOOS=linux GOARCH=386 go build -o \"\$BUILD.bin\" ./src/*.go
+if [ \"\$?\" == \"0\" ]; then 
+    chmod +x \"\$BUILD\"\"32.bin\"
+    echo \"El binario de Linux x32 fue creado con exito\"
+fi
+" > make.sh
 
 chmod +x ./make.sh
 

@@ -13,6 +13,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Listo los monitores y abro una sesion de polybar para cada
 # monitor activo, desde el mismo archivo de conf
 
+
+#Variables 
 MONITOR_PRIMARIO="eDP-1"
 
 for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do

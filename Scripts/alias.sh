@@ -1,4 +1,6 @@
-#Paquetes
+############
+# Paquetes #
+############
 #alias inpc="sudo pacman -S"
 #alias unpc="sudo pacman -Rns"
 #alias uppc="sudo pacman -Syyu"
@@ -11,7 +13,9 @@ alias pgg="ping 8.8.8.8"
 alias vld="vivaldi-stable"
 alias fixtime="sudo ntpd -qg"
 
-#ClipBoard(CB)
+#################
+# ClipBoard(CB) #
+#################
 
 #Lo que se le pase como parametros los manda al clipboard
 cbi(){
@@ -26,13 +30,17 @@ alias copyf="xclip-copyfile" #Copiar archivo a CB#
 alias pastef="xclip-pastefile" #Pegar archivo a CB
 alias ipc="go-ip public | xclip -sel clip" #Copiar IP Publica al CB
 
-#Trash
+#########
+# Trash #
+#########
 alias tlist="trash-list"
 alias trm="trash-rm"
 alias trestore="trash-restore"
 alias rm="trash-put"
 
-#Tar
+#######
+# Tar #
+#######
 alias tarh="echo Help: \"tar -cf/-xf <name/path .tar> <files/path to tar>\"" #Mostrar info como hacer un tar
 alias tarc="tar -cf" #Crear tar
 alias tarx="tar -xf" #Deshacer tar
@@ -40,7 +48,7 @@ alias tarx="tar -xf" #Deshacer tar
 #Ir a la carpeta con "goto" y abrir VSCode ahi
 goc() {
     goto $@
-    if [[ "$?" == "0" ]]; then
+    if [[ $? -eq 0 ]]; then
         code ./
         exit 0
     else 
@@ -51,7 +59,7 @@ goc() {
 #Comando goto
 source "$HOME/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
-
+#Varaibles SSH
 source "$HOME/Scripts/varsSsh.sh"
 scp2server() {
     scp -P $PORT_MY_SSH $@ $IP_MY_SSH:/home/joaco/Temp

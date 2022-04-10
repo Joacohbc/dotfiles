@@ -67,3 +67,4 @@ Githubs/Post/URL that I use configure my linux:
 19. lxappearance && kvantum - Theme Chooser - My themes: Adawita-dark && Matchama-Dark-Aliz
 20. VirtualBox && Vagrant - Virtualization
 21. Ventoy - Create a booteable USB
+22. Only Office, Pinta && Google Docs - Documents and Photo tools

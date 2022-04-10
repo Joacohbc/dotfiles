@@ -128,6 +128,9 @@ workspace $ws1 output eDP-1
 workspace $ws2 output HDMI-1
 workspace $ws3 output HDMI-1
 
+workspace $ws5 output eDP-1 # Para cosas Random en Monitor 1 
+workspace $ws6 output HDMI-1 # Para cosas Reweandom en Monitor 2
+
 
 # switch to workspace
 bindsym mod1+1 workspace $ws1

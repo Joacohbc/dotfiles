@@ -323,6 +323,9 @@ exec_always "sh ~/Scripts/scriptsPolybar/launch.sh"
 #Apago el Bluetooh 
 exec "bluetooth off"
 
+#Notificaciones de bateria
+exec "batsignal -b"
+
 #Arreglar el horarios
 # Como no se puede ejecutar comandos sudo desde i3
 # Para arreglar la hora uso crontab desde el usuario 

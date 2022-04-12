@@ -7,7 +7,7 @@ player_titles=$(playerctl metadata title 2> /dev/null)
 playerctl metadata title &> /dev/null #para que no tire el resultado al la salida
 
 #Si no tiene titulo
-if [ "$?" == "1" ]; then
+if [ $? -eq 1 ]; then
 	if [ "$player_status" = "Playing" ]; then
 		echo " `playerctl status` "
 	elif [ "$player_status" = "Paused" ]; then

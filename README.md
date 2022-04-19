@@ -15,12 +15,13 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 3. xrandr - Configure Monitors
 4. rofi - Launcher and Windows Movement Assistant
 5. picom - Trasparency
-6. nitrogen - Wallpapers
+6. feh - Wallpapers
 7. playerctl - Music control
 8. brightnessctl - Bright control
 9. polybar with polybar-themes(theme 'hack', with a few edited) - Bars
 10. dunst - Notification Manager
 11. tlp && powertop - Battery Savers
+12. xdotool - Simulate keyboard/mouse
 
 Githubs/Post/URL that I use configure my linux:
 

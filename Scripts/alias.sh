@@ -61,6 +61,8 @@ source "$HOME/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
 
 #Varaibles SSH
 source "$HOME/Scripts/varsSsh.sh"
+alias sshs="ssh -X -Y -p $PORT_MY_SSH $IP_MY_SSH"
+
 scp2server() {
     scp -P $PORT_MY_SSH $@ $IP_MY_SSH:/home/joaco/Temp
 }

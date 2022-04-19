@@ -13,11 +13,12 @@ rofi_command="rofi"
 
 #Opciones de apagado
 lock="1-  Lock"
-updateLock="2-  Update Lockscreen "
+updateLock="2-  Update Lockscreen "
 suspend="3- 鈴 Sleep"
 shutdown="4-  Shutdown"
-logout="5-  Logout"
-reboot="6- 拉 Restart"
+updatebg="5-  Update Background"
+logout="6-  Logout"
+reboot="7- 拉 Restart"
 
 # Confirmation
 confirm_exit() {
@@ -33,7 +34,7 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$updateLock\n$suspend\n$shutdown\n$logout\n$reboot"
+options="$lock\n$updateLock\n$suspend\n$shutdown\n$updatebg\n$logout\n$reboot"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime $uptime" -I -dmenu -selected-row 0)"
 case $chosen in
@@ -78,4 +79,12 @@ case $chosen in
 			msg
         fi
         ;;
+	$updatebg)
+		cat $HOME/.fehbg | grep m1.png
+		if [ $? -eq 0 ]; then
+			sh "$HOME/Scripts/feh-config.sh" 1 #Pongo el fondo de arch
+		else
+			sh "$HOME/Scripts/feh-config.sh" 0 #Pongo los otros fondos
+		fi
+		;;
 esac

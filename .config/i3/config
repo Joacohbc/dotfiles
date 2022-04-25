@@ -226,7 +226,7 @@ assign [class="discord"] $ws7
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Droidcam"] $ws9
 assign [class="zoom.*"] $ws3
-
+for_window [class="flameshot"] floating enable
 
 #Hago todo las ventanas de clase "zoom" (osea, de Zoom Mettings) flotantes
 for_window [class="zoom"] floating enable
@@ -266,6 +266,8 @@ bindsym Ctrl+Insert exec flameshot screen -n 0 -c #Camptura de pantalla al monit
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Shift+d exec rofi -show run
 bindsym $mod+Tab exec rofi -show window
+bindsym mod1+Tab exec "sh $HOME/Scripts/rofiI3Workspace.sh goto"
+bindsym mod1+Shift+Tab exec "sh $HOME/Scripts/rofiI3Workspace.sh switch"
 
 #Trasparencia(Alterar entre activarla y desactivarla)
 bindsym $mod+t exec "sh $HOME/Scripts/picom.sh"

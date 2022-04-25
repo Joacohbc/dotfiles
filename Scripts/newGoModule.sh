@@ -89,12 +89,10 @@ if [ "$op" == "y" ]; then
     touch .gitignore
 
     echo "
-    testing/*
-    *.sh
-    .vscode/*
+testing/*
+*.sh
+.vscode/*
     " > .gitignore
-
-    git add -A
 fi
 
 #################################

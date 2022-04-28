@@ -47,25 +47,25 @@ Githubs/Post/URL that I use configure my linux:
 
 ## My tools
 
-1. zsh with oh-my-zsh(theme "powerlevel10k") - Shell
-2. flameshot - Screenshots
-3. vivaldi - Browser
-4. alacritty - Terminal
-5. ranger && nautilus - File Manager
-6. htop && gtop - Task management
-7. xclip && copyq - Clipboard
-8. yay - Package management(for AUR packages)
-9. nano && nvim - Console Editor
+1. Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell
+2. Flameshot - Screenshots
+3. Vivaldi - Browser
+4. Alacritty - Terminal
+5. Ranger && nautilus - File Manager
+6. Htop && gtop - Task management
+7. Xclip && copyq - Clipboard
+8. Yay - Package management(for AUR packages)
+9. Nano && nvim - Console Editor
 10. VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
-11. noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
-12. goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
-13. trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
+11. Noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
+12. Goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
+13. Trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
 14. Github Desktop - GUI Git Manager
-15. udiskie - Automount disks
-16. nm-applet - Network Manager Tray
-17. testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
-18. neofetch - CLI System Information Tool
-19. lxappearance && kvantum - Theme Chooser - My themes: Adawita-dark && Matchama-Dark-Aliz
-20. VirtualBox && Vagrant - Virtualization
-21. Ventoy - Create a booteable USB
-22. Only Office, Pinta && Google Docs - Documents and Photo tools
+15. Udiskie - Automount disks
+16. Nm-applet - Network Manager Tray
+17. Testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
+18. Neofetch - CLI System Information Tool
+19. VirtualBox && Vagrant - Virtualization
+20. Ventoy - Create a booteable USB
+21. Only Office, Pinta && Google Docs - Documents and Photo tools
+22. OBS Studio - Screen Recorder

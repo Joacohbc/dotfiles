@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-rofi_command="rofi" 
 
-
-# Settea el modo
-MODE="$1"
+# Guardo el modo
+MODE_SELECTED="$1"
 
 function i3msg() {
-    if [ "$MODE" == "goto" ];then
+    if [ "$MODE_SELECTED" == "goto" ];then
         i3-msg workspace $1
-    else 
+    elif [ "$MODE_SELECTED" == "switch" ]; then
         i3-msg move container to workspace $1
+    else
+        rofi -e "Error: the mode: \"$MODE_SELECTED\" is not valid"
     fi
 }
 
@@ -17,8 +17,8 @@ wk1="1 - Code  "
 wk2="2 - Browser "
 wk3="3 - Multimedia "
 wk4="Q - Files  "
-wk5="W - First Monitor  "
-wk6="E - Second Monitor  "
+wk5="W - Monitor 1  "
+wk6="E - Monitor 2  "
 wk7="A - Discord ﭮ "
 wk8="S - Random ﯂ "
 wk9="D - Droidcam  "
@@ -27,11 +27,11 @@ wk9="D - Droidcam  "
 options="$wk1\n$wk2\n$wk3\n$wk4\n$wk5\n$wk6\n$wk7\n$wk8\n$wk9\n"
 
 text="Select Workspace"
-if [ "$MODE" == "switch" ]; then
+if [ "$MODE_SELECTED" == "switch" ]; then
     text="Move to Workspace"
 fi
 
-chosen="$(echo -e "$options" | $rofi_command -p "$text" -I -dmenu -matching prefix -font "FiraCode Nerd Font 11")"
+chosen="$(echo -e "$options" | rofi -p "$text" -I -dmenu -matching prefix -font "FiraCode Nerd Font 11")"
 
 case $chosen in
     $wk1)

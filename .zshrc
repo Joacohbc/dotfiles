@@ -81,7 +81,8 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
-  )
+  zsh-history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
 

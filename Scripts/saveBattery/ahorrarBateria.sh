@@ -87,24 +87,33 @@ if [ $? -eq 0 ]; then
         exit 1
     fi 
     
+    #Reiniciar Fondo de pantalla
+    nitrogen --restore &>> /dev/null
+fi
+
+msg "Activar Polybar Save-Baterry"
+if [ $? -eq 0 ]; then
     #Reiniciar Polybar
     $HOME/Scripts/scriptsPolybar/launch.sh save-bat &>> /dev/null
     if [ $? -eq 0 ]; then
         exito "> Se activo Polybar en modo save-bat <"
     fi
-
-    #Reiniciar Fondo de pantalla
-    nitrogen --restore &>> /dev/null
 fi
 
-#Bajo el brillo
-brightnessctl set 15% &>> /dev/null
+msg "Bajar brillo a 15%"
 if [ $? -eq 0 ]; then
-    exito "> Se bajo el brillo <"
+    #Bajo el brillo
+    brightnessctl set 15% &>> /dev/null
+    if [ $? -eq 0 ]; then
+        exito "> Se bajo el brillo <"
+    fi
 fi
 
-#Apagar picom 
-killall -p picom &>> /dev/null
+msg "Desactivar trasparencia"
 if [ $? -eq 0 ]; then
-    exito "> Se detuvo picom <"
+    #Apagar picom 
+    killall -p picom &>> /dev/null
+    if [ $? -eq 0 ]; then
+        exito "> Se detuvo picom <"
+    fi
 fi

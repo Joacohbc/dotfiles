@@ -1,7 +1,7 @@
 # INFO: Pone el fondo de pantalla
 if [ $(xrandr --listmonitors | grep Monitors | cut -d" " -f2) -eq 1 ]; then
     feh --bg-fil $HOME/Wallpaper/background/archanime.png
-    exit $?
+    exit 0
 fi
 
 if [ "$1" == "1" ]; then

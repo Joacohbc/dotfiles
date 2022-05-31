@@ -12,13 +12,14 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi" 
 
 #Opciones de apagado
-lock="1-  Lock"
-updateLock="2-  Update Lockscreen "
-suspend="3- 鈴 Sleep"
-shutdown="4-  Shutdown"
-updatebg="5-  Update Background"
-logout="6-  Logout"
-reboot="7- 拉 Restart"
+lock="1 -  Lock"
+updateLockRandom="2 -  Update Lockscreen"
+suspend="3 - 鈴 Sleep"
+updatebg="4 -  Change Background"
+updateLock="5 -  Simple Lockscreen"
+shutdown="6 -  Shutdown"
+logout="7 -  Logout"
+reboot="8 - 拉 Restart"
 
 # Confirmation
 confirm_exit() {
@@ -34,7 +35,7 @@ msg() {
 }
 
 # Variable passed to rofi
-options="$lock\n$updateLock\n$suspend\n$shutdown\n$updatebg\n$logout\n$reboot"
+options="$lock\n$updateLockRandom\n$suspend\n$updatebg\n$updateLock\n$shutdown\n$logout\n$reboot"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime $uptime" -I -dmenu -selected-row 0)"
 case $chosen in
@@ -59,15 +60,16 @@ case $chosen in
         fi
         ;;
     $lock)
-		betterlockscreen -l &
+		betterlockscreen -l
         ;;
-	$updateLock)
+	$updateLockRandom)
 		sh $HOME/Scripts/actualizarWall.sh
 		;;
     $suspend)
 		mpc -q pause
 		amixer set Master mute
-		(betterlockscreen -l &) && systemctl suspend
+		betterlockscreen -l &
+		systemctl suspend
         ;;
     $logout)
 		ans=$(confirm_exit &)
@@ -86,5 +88,9 @@ case $chosen in
 		else
 			sh "$HOME/Scripts/feh-config.sh" 0 #Pongo los otros fondos
 		fi
+		;;
+	$updateLock)
+		betterlockscreen -u $HOME/Wallpaper/background/archanime.png
+		notify-send -i low "Locksreen simple actualizado" -t 1500 
 		;;
 esac

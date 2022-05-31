@@ -93,7 +93,7 @@ fi
 
 msg "Activar Polybar Save-Baterry"
 if [ $? -eq 0 ]; then
-    #Reiniciar Polybar
+    #Reiniciar Polybar 
     $HOME/Scripts/scriptsPolybar/launch.sh save-bat &>> /dev/null
     if [ $? -eq 0 ]; then
         exito "> Se activo Polybar en modo save-bat <"
@@ -107,6 +107,27 @@ if [ $? -eq 0 ]; then
     if [ $? -eq 0 ]; then
         exito "> Se bajo el brillo <"
     fi
+fi
+
+msg "Opciones Redshift"
+if [ $? -eq 0 ]; then
+
+    msg "Activar Redshift"
+    if [ $? -eq 0 ]; then
+        redshift -O 2500
+        if [ $? -eq 0 ]; then
+            exito "> Se activo el filtro de luz <"
+        fi
+    fi
+
+    msg "Desctivar Redshift"
+    if [ $? -eq 0 ]; then
+        xrandr --output eDP-1 --gamma 1:1:1 --brightness 1.0
+        if [ $? -eq 0 ]; then
+            exito "> Se desactivo el filtro de luz <"
+        fi
+    fi
+
 fi
 
 msg "Desactivar trasparencia"

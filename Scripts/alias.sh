@@ -28,6 +28,7 @@ alias pwdc="pwd | xclip -sel c" #Directorio actul al CB
 alias cbc="fc -ln -1 | xclip -sel c" #Copiar ultimo comando al CB
 alias copyf="xclip-copyfile" #Copiar archivo a CB#
 alias pastef="xclip-pastefile" #Pegar archivo a CB
+alias cutf="xclip-cutfile" #Cortar archivo al CB
 alias ipc="go-ip public | xclip -sel clip" #Copiar IP Publica al CB
 
 #########

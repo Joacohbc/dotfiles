@@ -1,7 +1,7 @@
 #INFO: Cambiar lenguaje del teclado de US to ES por N milisegundos
 setxkbmap -query | grep us 
 
-MILISEGUNDOS=1500
+MILISEGUNDOS=1800
 #Si grep encuentra "us"($? = 0), entoces el teclado esta en ingles y lo pone en español
 if [ $? -eq 0 ]; then 
     setxkbmap es

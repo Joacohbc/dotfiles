@@ -45,6 +45,14 @@ Githubs/Post/URL that I use configure my linux:
 - <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
 - <https://github.com/puxplaying/toolbox>
 
+## Style
+
+- Desktop - i3 Windows Manager
+- Font - FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+- Theme - Adawita Dark
+- Icons - ePapirus-Dark
+- Cursor - Sunity cursors (<https://github.com/alvatip/Sunity-cursors>)
+
 ## My tools
 
 1. Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell

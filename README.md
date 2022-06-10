@@ -9,8 +9,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 ## Package that I use
 
 1. i3gaps(i3wm) - Windows Manager
-    - xprop - To know the class of a Windows
-    - xorg-xev (or only xev) - To know the "name" of a key of the keyboard
+   - xprop - To know the class of a Windows
+   - xorg-xev (or only xev) - To know the "name" of a key of the keyboard
 2. betterlockscreen - Screen Lock
 3. xrandr - Configure Monitors
 4. rofi - Launcher and Windows Movement Assistant
@@ -44,8 +44,9 @@ Githubs/Post/URL that I use configure my linux:
 - <https://www.nerdfonts.com/cheat-sheet>
 - <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
 - <https://github.com/puxplaying/toolbox>
+- 
 
-## Style
+## Themes
 
 - Desktop - i3 Windows Manager
 - Font - FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
@@ -55,25 +56,39 @@ Githubs/Post/URL that I use configure my linux:
 
 ## My tools
 
-1. Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell
-2. Flameshot - Screenshots
-3. Vivaldi - Browser
-4. Alacritty - Terminal
-5. Ranger && nautilus - File Manager
-6. Htop && gtop - Task management
-7. Xclip && copyq - Clipboard
-8. Yay - Package management(for AUR packages)
-9. Nano && nvim - Console Editor
-10. VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
-11. Noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
-12. Goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
-13. Trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
-14. Github Desktop - GUI Git Manager
-15. Udiskie - Automount disks
-16. Nm-applet - Network Manager Tray
-17. Testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
-18. Neofetch - CLI System Information Tool
-19. VirtualBox && Vagrant - Virtualization
-20. Ventoy - Create a booteable USB
-21. Only Office, Pinta && Google Docs - Documents and Photo tools
-22. OBS Studio - Screen Recorder
+### Console / Terminal
+
+- Alacritty - Terminal
+- Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell
+- Goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
+- Ranger - CLI File Manager
+- Xclip && Xsel - Clipboard
+- Trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
+- Neofetch - CLI System Information Tool
+- Htop && gtop - Task management
+- Vagrant - Virtualization
+- Testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
+- Nano && Nvim - Console Editor
+
+### Packages
+
+- Yay - Package management(for AUR packages)
+- Pamac - Manager
+
+### GUI
+
+- Flameshot - Screenshots
+- Vivaldi - Browser
+- Copyq - Clipboard
+- Nautilus - File Manager
+- VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+- Noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
+- Github Desktop - GUI Git Manager
+- Udiskie - Automount disks
+- Nm-applet - Network Manager Tray
+- VirtualBox && Vagrant - Virtualization
+- Ventoy - Create a booteable USB
+- Only Office && Google Docs - Documents Tools
+- Pinta - Photos Tools
+- VLC - Multimedia
+- OBS Studio - Screen Recorder

@@ -34,8 +34,8 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
@@ -73,10 +73,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+#bindsym $mod+h split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -122,14 +122,14 @@ set $ws9 "9"
 set $ws10 "10"
 
 
-# Seteo los wk al un monitor
+# Seteo los workspaces al un monitor
 workspace $ws1 output eDP-1
 workspace $ws2 output HDMI-1
 workspace $ws3 output HDMI-1
 workspace $ws7 output HDMI-1
 
 workspace $ws5 output eDP-1 # Para cosas Random en Monitor 1 
-workspace $ws6 output HDMI-1 # Para cosas Reweandom en Monitor 2
+workspace $ws6 output HDMI-1 # Para cosas Random en Monitor 2
 
 # switch to workspace
 bindsym mod1+1 workspace $ws1
@@ -223,7 +223,7 @@ assign [class="Code"] $ws1
 assign [class="discord"] $ws7
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Droidcam"] $ws9
-assign [class="zoom.*"] $ws3
+assign [class="zoom .*"] $ws3
 for_window [class="flameshot"] floating enable
 
 #Hago todo las ventanas de clase "zoom" (osea, de Zoom Mettings) flotantes
@@ -253,48 +253,51 @@ floating_maximum_size 1336 x 738
 #muestra activado
 bindsym Caps_Lock exec "(sleep 0.2; sh $HOME/Scripts/capsLock.sh) &" 
 
-#Flameshot
+# Abrir el menu Copyq
+bindsym $mod+v exec "copyq menu"
+
+# Flameshot
 bindsym Shift+Print exec flameshot gui
 bindsym Shift+Insert exec flameshot gui
 bindsym Ctrl+Print exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
 bindsym Ctrl+Insert exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
 
-#Rofi
+# Rofi
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Tab exec rofi -show window
 bindsym mod1+Tab exec "sh $HOME/Scripts/rofiI3Workspace.sh goto"
 bindsym mod1+Shift+Tab exec "sh $HOME/Scripts/rofiI3Workspace.sh switch"
 
-#Trasparencia(Alterar entre activarla y desactivarla)
+# Trasparencia(Alterar entre activarla y desactivarla)
 bindsym $mod+t exec "sh $HOME/Scripts/picom.sh"
 
-#Musica
+# Musica
 bindsym Ctrl+mod1+Down exec playerctl play-pause
 bindsym Ctrl+mod1+Right exec playerctl next
 bindsym Ctrl+mod1+Left exec playerctl previous
 
-#Menu de Apagar/Gestion/Lock/Etc
+# Menu de Apagar/Gestion/Lock/Etc
 bindsym $mod+Escape exec "sh $HOME/Scripts/scriptsPolybar/menuApagado.sh &"
 
-#Recargar monitores
+# Recargar monitores
 bindsym $mod+Shift+m exec "sh $HOME/Scripts/recargarMonitores.sh"
 
-# BRILLO (USA EL PAQUETE brightnessctl)
+# Brillo
 bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +1%
 
-#Cambiar distribucion del teclado
+# Cambiar distribucion del teclado
 bindsym mod1+space exec "sh $HOME/Scripts/keyboard/UStoESTime.sh"
 bindsym Ctrl+mod1+space exec "sh $HOME/Scripts/keyboard/UStoES.sh"
 
-#Activar Lockscreen
+# Activar Lockscreen
 bindsym $mod+p exec betterlockscreen -l &
 
 #Actualizar LockScreen
-bindsym $mod+Shift+p exec "sh $HOME/Scripts/actualizarWall.sh"
+#bindsym $mod+Shift+p exec "sh $HOME/Scripts/actualizarWall.sh"
 
 #Tareas
-bindsym $mod+Shift+g exec alacritty -e htop
+#bindsym $mod+Shift+g exec alacritty -e htop
 
 ################################
 ## INICIO TODOS MIS PROGRAMAS ##
@@ -306,46 +309,39 @@ bindsym $mod+Shift+g exec alacritty -e htop
 #3exec discord
 exec vivaldi-stable
 
-#Ejecutar gestor de clipboard
+#Ejecutar gestor de clipboard (solo al inciar i3)
 exec copyq
 
-#Poner fondo de pantalla
+#Poner fondo de pantalla (solo al inciar i3)
 exec "sh $HOME/Scripts/feh-config.sh 0"
 
-#Ejecutar flameshot
+#Ejecutar flameshot (solo al inciar i3)
 exec flameshot
 
-#Poner trasparencia
+#Poner trasparencia (solo al inciar i3)
 exec "sh $HOME/Scripts/picom.sh"
 
-#Dunst (Notificaciones)
+#Dunst (Notificaciones) (solo al inciar i3)
 exec "systemctl start --user dunst"
 
-#Apago el Bluetooh 
+#Apago el Bluetooh (solo al inciar i3)
 exec "bluetooth off"
 
-#Notificaciones de bateria
+#Notificaciones de bateria (solo al inciar i3)
 exec "batsignal -b"
 
-#Undiskie para auto montar discos
+#Undiskie para auto montar discos (solo al inciar i3)
 #Primero detengo todos los procesos de undiskie y luego lo ejecuto de vuelta
-exec_always "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
+exec "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
 
-#POLYBAR
+#Para poner la pantalla tactil (con el Id=13 en xinput --list) para el monitor principal (solo al inciar i3)
+exec "xinput map-to-output 13 eDP-1"
+
+#POLYBAR (cada vez que recargue el i3)
 exec_always "sh $HOME/Scripts/scriptsPolybar/launch.sh"
 
-#Cargo imagenes del Lockscreen al cache
+#Cargo imagenes del Lockscreen al cache (cada vez que recargue el i3)
 exec_always betterlockscreen -u $HOME/Wallpaper/ &
-
-#Arreglar el horarios
-# Como no se puede ejecutar comandos sudo desde i3
-# Para arreglar la hora uso crontab desde el usuario 
-# root con:
-# "@reboot ntpd -qg"
-# 
-# Para habilitar cron (cronie) al inicio uso:
-# sudo systemctl enable cronie
-
 
 #Ahorrar bateria
 # Dejo los servicios para ahorrar bateria 
@@ -354,3 +350,4 @@ exec_always betterlockscreen -u $HOME/Wallpaper/ &
 # sudo systemctl enable tlp --now
 # sudo systemctl enable --now thermald
 # sudo powertop
+

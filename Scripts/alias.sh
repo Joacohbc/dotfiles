@@ -12,6 +12,7 @@ alias x="exit"
 alias pgg="ping 8.8.8.8"
 alias vld="vivaldi-stable"
 alias fixtime="sudo ntpd -qg"
+alias src="source ~/.zshrc"
 
 #################
 # ClipBoard(CB) #

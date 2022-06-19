@@ -11,6 +11,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 1. i3gaps(i3wm) - Windows Manager
    - xprop - To know the class of a Windows
    - xorg-xev (or only xev) - To know the "name" of a key of the keyboard
+   - xorg-input - To configure touchscreen
 2. betterlockscreen - Screen Lock
 3. xrandr - Configure Monitors
 4. rofi - Launcher and Windows Movement Assistant
@@ -44,7 +45,6 @@ Githubs/Post/URL that I use configure my linux:
 - <https://www.nerdfonts.com/cheat-sheet>
 - <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
 - <https://github.com/puxplaying/toolbox>
-- 
 
 ## Themes
 
@@ -65,7 +65,8 @@ Githubs/Post/URL that I use configure my linux:
 - Xclip && Xsel - Clipboard
 - Trash-cli - Trash in command line (<https://github.com/andreafrancia/trash-cli>)
 - Neofetch - CLI System Information Tool
-- Htop && gtop - Task management
+- Htop && Bashtop - Task Management
+- Nethogs, Iftop, Termsharck && Wireshark-cli - Network Information Tools
 - Vagrant - Virtualization
 - Testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
 - Nano && Nvim - Console Editor
@@ -73,7 +74,7 @@ Githubs/Post/URL that I use configure my linux:
 ### Packages
 
 - Yay - Package management(for AUR packages)
-- Pamac - Manager
+- Pamac - Package Manager (GUI)
 
 ### GUI
 

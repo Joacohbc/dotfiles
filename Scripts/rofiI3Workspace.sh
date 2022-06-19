@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
 # Guardo el modo
 MODE_SELECTED="$1"

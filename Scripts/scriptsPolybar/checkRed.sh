@@ -4,7 +4,7 @@ connected="說"
 disconnected="ﲁ"
 
 #Hace un ping
-ping -c 1 google.com &>/dev/null
+curl -I google.com &>/dev/null
 
 #Si no hay respuesta ($? = 1), entoces esta offline
 #Si hay respuesta ($? = 0), entoces esta online

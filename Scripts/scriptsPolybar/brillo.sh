@@ -5,8 +5,4 @@ actual=`brightnessctl g`
 max=`brightnessctl m`
 
 #Calcula porcentaje
-result=`expr $actual \* 100`
-porcentaje=`expr $result / $max`
-
-#Y lo muestra
-echo $porcentaje"%"
+echo `expr \( $actual \* 100 \) / $max`"%"

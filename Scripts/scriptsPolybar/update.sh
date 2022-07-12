@@ -12,13 +12,13 @@ msg () {
 }
 
 # Veo si actualizaciones
-NUM_UPDATE_NORMAL=$(checkupdates 2>> /dev/null)
+NUM_UPDATE_NORMAL=$(checkupdates 2>> /dev/null | wc -l)
 if [ $? -ne 0 ]; then
     NUM_UPDATE_NORMAL=0
 fi
 
 # Veo si actualizaciones en AUR
-NUM_UPDATE_AUR=$(pacman -Qm 2>> /dev/null | aur vercmp | wc -l)
+NUM_UPDATE_AUR=$(pacman -Qm 2>> /dev/null | aur vercmp 2>> /dev/null | wc -l)
 if [ $? -ne 0 ]; then
     NUM_UPDATE_AUR=0
 fi
@@ -43,7 +43,7 @@ if [ $NUM_UPDATE_NORMAL -ne 0 ]; then
     fi
 fi
 
-if [ $NUM_UPDATE_NORMAL -ne 0 ]; then
+if [ $NUM_UPDATE_AUR -ne 0 ]; then
     echo -e "\n> Paquetes para actualizar AUR: $NUM_UPDATE_AUR <"
 
     # Pregunto si quiere actualizar

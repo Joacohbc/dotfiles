@@ -1,12 +1,12 @@
 #INFO: MUESTRA LA CANTIDAD ACTUALIZACIONES USANDO YAY (PACMAN y AUR) 
 
-NUM_UPDATE_NORMAL=$(checkupdates 2>> /dev/null)
+NUM_UPDATE_NORMAL=$(checkupdates 2>> /dev/null | wc -l)
 if [ $? -ne 0 ]; then
     NUM_UPDATE_NORMAL=0
 fi
 
 # Checkeo 
-NUM_UPDATE_AUR=$(pacman -Qm 2>> /dev/null | aur vercmp | wc -l)
+NUM_UPDATE_AUR=$(pacman -Qm 2>> /dev/null | aur vercmp 2>> /dev/null | wc -l)
 if [ $? -ne 0 ]; then
     NUM_UPDATE_AUR=0
 fi

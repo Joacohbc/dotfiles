@@ -114,7 +114,7 @@ if [ $? -eq 0 ]; then
 
     msg "Activar Redshift"
     if [ $? -eq 0 ]; then
-        redshift -O 2500
+        redshift -O 4500
         if [ $? -eq 0 ]; then
             exito "> Se activo el filtro de luz <"
         fi
@@ -122,7 +122,7 @@ if [ $? -eq 0 ]; then
 
     msg "Desctivar Redshift"
     if [ $? -eq 0 ]; then
-        xrandr --output eDP-1 --gamma 1:1:1 --brightness 1.0
+        redshift -x
         if [ $? -eq 0 ]; then
             exito "> Se desactivo el filtro de luz <"
         fi

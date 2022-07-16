@@ -53,5 +53,8 @@ if [ $NUM_UPDATE_AUR -ne 0 ]; then
     fi
 fi
 
+# Reinicio el Modulo que muestra las acutalizaciones de polybar
+# polybar-msg action update restart &>> /dev/null
+
 echo -e "\n> Actualizacion finalizada (ENTER para salir)...<"
 read 

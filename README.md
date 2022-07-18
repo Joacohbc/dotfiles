@@ -26,13 +26,14 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Nm-applet - Network Manager Tray
 - Volumen-icon - Volume Tray
 
-## Themes
+## Themes / Confs
 
 - Desktop - i3 Windows Manager
 - Font - FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
-- Theme - Adawita Dark
+- Theme - Orchis-Dark (GKT and QT)
 - Icons - ePapirus-Dark
-- Cursor - Sunity cursors (<https://github.com/alvatip/Sunity-cursors>)
+- Cursor - Vimix Cursors
+- Audio - ALSA and Pulseaudio
 
 ## Package and Tools
 
@@ -66,17 +67,18 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Flameshot - Screenshots
 - Vivaldi & Google Chrome- Browser
 - Copyq - Clipboard
-- Nautilus - File Manager
+- Nemo - File Manager
 - VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
-- Noisetorch - Suppresses Noise (<https://github.com/lawl/NoiseTorch>)
 - Github Desktop - GUI Git Manager
 - VirtualBox (for Vagrant) - Virtualization
 - Ventoy - Create a booteable USB
-- Only Office && Google Docs - Documents Tools
+- Only Office && Google Docs && Okular - Documents Tools
 - Pinta - Photos Tools
 - VLC - Multimedia
 - OBS Studio - Screen Recorder
 - Redshift - Nightlight
+- Grub Customizer
+- Timeshift - Backup & Restore
 
 ## Githubs/Post/URL that I use configure My Linux
 

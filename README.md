@@ -6,6 +6,20 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 - Manjaro Linux x86_64 (i3 Edition) - Arch Linux distro
 
+## Order of dotfiles directories
+
+```bash
+/home/user
+  ├── .config/
+  ├── Scripts/
+  └── Wallpaper/
+      ├── *.png / *.jpg - Wallpapers for lockscreen (randomly selected)
+      └── background/
+          ├── m1.png - Wallpaper for 1st monitor
+          ├── m2.png - Wallpaper for 2nd monitor
+          └── simple.png - Wallpaper simple for both monitor (or if the second is not connected)
+```
+
 ## Desktop Package that I use
 
 - i3gaps(i3wm) - Windows Manager

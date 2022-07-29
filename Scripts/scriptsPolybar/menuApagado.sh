@@ -90,7 +90,7 @@ case $chosen in
 		fi
 		;;
 	$updateLock)
-		betterlockscreen -u $HOME/Wallpaper/background/archanime.png
+		betterlockscreen -u $HOME/Wallpaper/background/simple.png
 		notify-send -i low "Locksreen simple actualizado" -t 1500 
 		;;
 esac

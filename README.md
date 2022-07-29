@@ -10,14 +10,14 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 ```bash
 /home/user
-  ├── .config/
-  ├── Scripts/
+  ├── .config/ # Configuration files
+  ├── Scripts/ # All Scripts of the system
   └── Wallpaper/
-      ├── *.png / *.jpg - Wallpapers for lockscreen (randomly selected)
+      ├── *.png / *.jpg # Wallpapers for lockscreen (randomly selected)
       └── background/
-          ├── m1.png - Wallpaper for 1st monitor
-          ├── m2.png - Wallpaper for 2nd monitor
-          └── simple.png - Wallpaper simple for both monitor (or if the second is not connected)
+          ├── m1.png # Wallpaper for 1st monitor
+          ├── m2.png # Wallpaper for 2nd monitor
+          └── simple.png # Wallpaper simple for both monitor (or if the second is not connected)
 ```
 
 ## Desktop Package that I use

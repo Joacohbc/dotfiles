@@ -47,6 +47,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 ## Themes / Confs
 
 - Desktop - i3 Windows Manager
+- Shell: Zsh
+  - Oh-my-zsh (theme "powerlevel10k")
 - Font - FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
 - Theme - Orchis-Dark (GKT and QT)
 - Icons - ePapirus-Dark
@@ -59,7 +61,6 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 - Alacritty && Terminator - Terminal
 - Bmenu - For some system tools
-- Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell
 - Goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
 - Ranger - CLI File Manager
 - Xclip && Xsel - Clipboard

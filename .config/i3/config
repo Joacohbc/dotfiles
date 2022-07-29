@@ -26,7 +26,7 @@ exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
 exec_always --no-startup-id pulseaudio
 #exec_always --no-startup-mid pa-applet
-bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+p exec pavucontrol
 
 ################################################################################################
 
@@ -50,11 +50,11 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+Shfit+h split h;exec notify-send 'tile horizontally'
-bindsym $mod+Shift+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+# bindsym $mod+Shift+h split h; exec notify-send 'tile horizontally'
+# bindsym $mod+Shift+v split v; exec notify-send 'tile vertically'
+bindsym $mod+q split toggle; exec notify-send 'Tiling Vertical/Horizontal'
 
-# toggle fullscreen mode for the focused container
+# toggle fullscreen mode for the focused containerH
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -91,12 +91,15 @@ bindsym $mod+Ctrl+Left workspace prev
 
 # Abrir terminal
 bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec terminator
 
-# kill focused window
+# Cerrar ventanas
 bindsym $mod+Shift+q kill
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
+
 #CapsLock (Ya en polybar)
 #Lo ejecuto con & y con un Sleep porque sino i3 ejecuta primero el script
 #y luego se activa el CapsLock, entoces simpre se cambia a activado y
@@ -149,7 +152,6 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +1%
 # Start Applications
 bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 #################
 ## WORKSPACES ###
@@ -199,14 +201,7 @@ bindsym mod1+Shift+r move container to workspace $ws7
 ## DONDE IRAN LOS PROGRAMAS ##
 ##############################
 
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
-
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Lightdm-settings"] floating enable
 for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Pavucontrol"] floating enable
@@ -214,13 +209,8 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="(?i)virtualbox"] floating enable border normal
-for_window [class="Xfburn"] floating enable
-
-assign [class="Code"] $ws1
-assign [class="Nemo"] $ws4
-assign [class="zoom*.*"] $ws3
 for_window [class="flameshot"] floating enable
+for_window [class="Timeshift-gtk"] floating enable
 
 #Hago todo las ventanas de clase "zoom" (osea, de Zoom Mettings) flotantes
 for_window [class="zoom*"] floating enable
@@ -229,8 +219,14 @@ for_window [class="zoom*"] floating enable
 for_window [class="zoom*" title="Zoom - Free Account"] floating disable
 for_window [class="zoom*" title="Zoom Meeting"] floating disable
 
+assign [class="Code"] $ws1
+assign [class="runjs"] $ws1
+assign [class="zoom*.*"] $ws3
+assign [class="Nemo"] $ws4
+assign [class="Vivaldi-stable" title="Postman"] $ws6
+
 #Maximo tamaño de las ventanas flotantes
-floating_maximum_size 1336 x 738
+floating_maximum_size 1200 x 600
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -246,18 +242,18 @@ bindsym $mod+Shift+r restart
 ################################
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
 exec --no-startup-id blueman-applet
 exec --no-startup-id vivaldi-stable
 exec --no-startup-id copyq
 exec --no-startup-id flameshot
 exec --no-startup-id "batsignal -b"
-exec --no-startup-id "xautolock -time 10 -locker 'betterlockscreen -l'"
+exec --no-startup-id "xautolock -time 15 -locker 'betterlockscreen -l'"
 exec "sh $HOME/Scripts/feh-config.sh 0"
 exec "sh $HOME/Scripts/picom.sh"
-exec "bluetooth off"
+# exec "bluetooth off"
 exec "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
-exec --no-startup-id "xinput map-to-output 13 eDP-1"
+exec "xinput map-to-output 13 eDP-1"
 exec --no-startup-id "falmeshot"
 exec_always --no-startup-id sh "$HOME/Scripts/scriptsPolybar/launch.sh"
 exec_always --no-startup-id "betterlockscreen -u $HOME/Wallpaper/ &"

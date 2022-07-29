@@ -1,5 +1,3 @@
-#! /usr/bin/env bash
-
 # Guardo el modo
 MODE_SELECTED="$1"
 
@@ -19,16 +17,15 @@ wk3="3 - Multimedia "
 wk4="Q - Files  "
 wk5="W - Monitor 1  "
 wk6="E - Monitor 2  "
-wk7="A - Discord ﭮ "
-wk8="S - Random ﯂ "
-wk9="D - Droidcam  "
 
 # Variable passed to rofi
-options="$wk1\n$wk2\n$wk3\n$wk4\n$wk5\n$wk6\n$wk7\n$wk8\n$wk9\n"
+options="$wk1\n$wk2\n$wk3\n$wk4\n$wk5\n$wk6"
 
-text="Select Workspace"
+
 if [ "$MODE_SELECTED" == "switch" ]; then
     text="Move to Workspace"
+else
+    text="Select Workspace"
 fi
 
 chosen="$(echo -e "$options" | rofi -p "$text" -I -dmenu -matching prefix -font "FiraCode Nerd Font 11")"

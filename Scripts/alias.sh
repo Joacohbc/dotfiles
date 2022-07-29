@@ -13,6 +13,7 @@ alias pgg="ping 8.8.8.8"
 alias vld="vivaldi-stable"
 alias fixtime="sudo ntpd -qg"
 alias src="source ~/.zshrc"
+alias getClass="xprop | grep CLASS"
 
 #################
 # ClipBoard(CB) #
@@ -50,16 +51,14 @@ alias tarx="tar -xf" #Deshacer tar
 #Ir a la carpeta con "goto" y abrir VSCode ahi
 goc() {
     goto $@
-    if [[ $? -eq 0 ]]; then
+    if [ $? -eq 0 ]; then
         code ./
         exit 0
-    else 
-        echo "$OUTPUT"
     fi
 }
 
 #Comando goto
-source "$HOME/Archivos/Colegio y Estudio/Z-Proyectos/Go/goto/MyAlias.sh"
+source "$HOME/Archivos/Colegio y Estudio/Z-Proyectos/Github/goto/MyAlias.sh"
 
 #Varaibles SSH
 source "$HOME/Scripts/varsSsh.sh"

@@ -49,26 +49,29 @@ mv ./main.go ./src/main.go
 #
 touch make.sh
 
-echo "BUILD=\"./bin/$PACKAGE\"
+echo "BUILDPATH=\"./bin/\"
 
 #Windows
-GOOS=windows GOARCH=amd64 go build -o \"\$BUILD.exe\" ./src/*.go
+OUTPUT=\"\$BUILDPATH/$PACKAGE.exe\"
+GOOS=windows GOARCH=amd64 go build -o \"\$OUTPUT\" ./src/*.go
 if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD.exe\"
+    chmod +x \"\$OUTPUT\" 
     echo \"El binario de Windows x64 fue creado con exito\"
 fi
 
 #Linux x64
-GOOS=linux GOARCH=amd64 go build -o \"\$BUILD.bin\" ./src/*.go
+OUTPUT=\"\$BUILDPATH/$PACKAGE-64.bin\"
+GOOS=linux GOARCH=amd64 go build -o \"\$OUTPUT\" ./src/*.go
 if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD\"\"64.bin\"
+    chmod +x \"\$OUTPUT\" 
     echo \"El binario de Linux x64 fue creado con exito\"
 fi
 
 #Linux
-GOOS=linux GOARCH=386 go build -o \"\$BUILD.bin\" ./src/*.go
+OUTPUT=\"\$BUILDPATH/$PACKAGE-32.bin\"
+GOOS=linux GOARCH=386 go build -o \"\$OUTPUT\" ./src/*.go
 if [ \"\$?\" == \"0\" ]; then 
-    chmod +x \"\$BUILD\"\"32.bin\"
+    chmod +x \"\$OUTPUT\" 
     echo \"El binario de Linux x32 fue creado con exito\"
 fi
 " > make.sh

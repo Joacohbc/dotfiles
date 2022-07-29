@@ -4,7 +4,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 ## OS
 
-- Manjaro Linux x86_64 (Gnome Edition) - Arch Linux distro
+- Manjaro Linux x86_64 (i3 Edition) - Arch Linux distro
 
 ## Desktop Package that I use
 
@@ -16,15 +16,19 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - xrandr - Configure Monitors
 - rofi - Launcher and Windows Movement Assistant
 - picom - Trasparency
-- feh - Wallpapers
+- feh - Wallpaper Manager
 - playerctl - Music control
 - brightnessctl - Bright control
 - polybar with polybar-themes(theme 'hack', with a few edited) - Bars
 - dunst - Notification Manager
 - Batsignal - Notification for low baterry
-- Udiskie - Automount disks
+
+### Trays Icons
+
 - Nm-applet - Network Manager Tray
 - Volumen-icon - Volume Tray
+- Udiskie - Automount disks
+- Blueman-applet - Bluetooh Tray
 
 ## Themes / Confs
 
@@ -39,7 +43,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 
 ### Console / Terminal Commands
 
-- Alacritty - Terminal
+- Alacritty && Terminator - Terminal
+- Bmenu - For some system tools
 - Zsh with Oh-my-zsh`(theme "powerlevel10k") - Shell
 - Goto - Movement between directories in CLI (<https://github.com/Joacohbc/goto>)
 - Ranger - CLI File Manager
@@ -51,9 +56,12 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Vagrant - Virtualization
 - Testdisk - Restore deleted files (<https://archlinux.org/packages/extra/x86_64/testdisk/>)
 - Nano && Nvim - Console Editor
-- calc - Calculator command
-- tlp && powertop - Battery Savers
-- xdotool - Simulate keyboard/mouse
+- Calc - Calculator command
+- Xdotool - Simulate keyboard/mouse
+- TLP && Powertop - Battery Savers
+- Ventoy - Create a booteable USB
+- 7z, gzip && xz - Zip manger
+- UFW - IPTablas Manager (Firewall)
 
 ### Packages management
 
@@ -65,20 +73,25 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 ### GUI Tools
 
 - Flameshot - Screenshots
-- Vivaldi & Google Chrome- Browser
-- Copyq - Clipboard
+- Vivaldi & Google Chrome- Browsers
+- Copyq - Clipboard Manager
 - Nemo - File Manager
-- VSCode - Text/Code Editor - My font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
+- VSCode - Text/Code Editor
+  - My Font: FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
 - Github Desktop - GUI Git Manager
 - VirtualBox (for Vagrant) - Virtualization
-- Ventoy - Create a booteable USB
-- Only Office && Google Docs && Okular - Documents Tools
+- Only Office && Google Docs - Documents Tools
+- Okular - Tool for PDFs
 - Pinta - Photos Tools
 - VLC - Multimedia
 - OBS Studio - Screen Recorder
+- Shotcut - Video Editor
 - Redshift - Nightlight
 - Grub Customizer
+- Gcolor2 - Color Picker
+- Blueman-manager - Bluetooh Manager
 - Timeshift - Backup & Restore
+- Xarchiver - Zip Manager
 
 ## Githubs/Post/URL that I use configure My Linux
 
@@ -101,3 +114,9 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - <https://www.nerdfonts.com/cheat-sheet>
 - <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
 - <https://github.com/puxplaying/toolbox>
+
+## Images
+
+![Desktop image](./images/desktop.png)
+
+![Neofetch image](./images/neofetch.png)

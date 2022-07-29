@@ -25,8 +25,3 @@ else
     xrandr --output eDP-1 --auto
     notify-send -i low "Solo el monitor principal activado" -t 1500 
 fi
-
-
-#Notifico que termine
-notify-send -i low "Monitores activos actualizados" -t 1500 
-

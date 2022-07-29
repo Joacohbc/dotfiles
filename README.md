@@ -26,7 +26,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
   - xprop - To know the class of a Windows
   - xorg-xev (or only xev) - To know the "name" of a key of the keyboard
   - xorg-input - To configure touchscreen
-- betterlockscreen - Screen Lock
+- betterlockscreen - Screen Locker
+- xautolock - Auto Screen Locker
 - xrandr - Configure Monitors
 - rofi - Launcher and Windows Movement Assistant
 - picom - Trasparency
@@ -52,6 +53,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Font - FiraCode Nerd Font (<https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode>)
 - Theme - Orchis-Dark (GKT and QT)
 - Icons - ePapirus-Dark
+- Display Manager - Lightdm
 - Cursor - Vimix Cursors
 - Audio - ALSA and Pulseaudio
 
@@ -107,6 +109,8 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Blueman-manager - Bluetooh Manager
 - Timeshift - Backup & Restore
 - Xarchiver - Zip Manager
+- Pavucontrol - Pulseuadio Manager
+- Lxappearance && Qt5ct - GKT and QT Managers
 
 ## Githubs/Post/URL that I use configure My Linux
 

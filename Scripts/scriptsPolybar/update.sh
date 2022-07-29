@@ -26,7 +26,7 @@ fi
 # Si no hay ninguna actualizacion salgo
 TOTAL=$(expr $NUM_UPDATE_NORMAL + $NUM_UPDATE_AUR)
 if [ $TOTAL -eq 0 ]; then
-    echo -e "> Nada que actualizar (ENTER para salir)...<"
+    echo -e "\n> Nada que actualizar (ENTER para salir)...<"
     read
     exit
 fi
@@ -53,8 +53,11 @@ if [ $NUM_UPDATE_AUR -ne 0 ]; then
     fi
 fi
 
-# Reinicio el Modulo que muestra las acutalizaciones de polybar
-# polybar-msg action update restart &>> /dev/null
+# Pregunto si quiere actualizar
+msg "Reiniciar Polybar"
+if [ $? -eq 0 ]; then
+    "$HOME/Scripts/scriptsPolybar/launch.sh" &>> /dev/null
+fi
 
 echo -e "\n> Actualizacion finalizada (ENTER para salir)...<"
 read 

@@ -7,7 +7,7 @@
     allow_bold = False
     background_color = "#1d1f21"
     cursor_color = "#aaaaaa"
-    font = FiraCode Nerd Font Mono 12
+    font = FiraCode Nerd Font Mono 10
     foreground_color = "#f6f5f4"
     show_titlebar = False
     use_system_font = False

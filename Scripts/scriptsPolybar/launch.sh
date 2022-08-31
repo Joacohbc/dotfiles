@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Add this script to your wm startup file.
-
 DIR="$HOME/.config/polybar/hack"
 
 # Terminate already running bar instances
@@ -9,6 +8,9 @@ killall -q polybar
 
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar &>> /dev/null; do sleep 1; done
+
+# Espero a que Pulseaudio se inice para iniciar el polybar
+while ! pgrep -u $UID -x pulseaudio &>> /dev/null; do sleep 1; done
 
 # Listo los monitores y abro una sesion de polybar para cada
 # monitor activo, desde el mismo archivo de conf

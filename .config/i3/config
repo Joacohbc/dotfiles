@@ -18,18 +18,6 @@ font xft:URWGothic-Book 11
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
-exec_always --no-startup-id pulseaudio
-#exec_always --no-startup-mid pa-applet
-bindsym $mod+Ctrl+p exec pavucontrol
-
-################################################################################################
-
 ##########################################
 ## LAYOUTS DE LOS WORKSPACES Y CONTAINER #
 ##########################################
@@ -101,10 +89,10 @@ bindsym Caps_Lock exec "(sleep 0.2; sh $HOME/Scripts/capsLock.sh) &"
 bindsym $mod+v exec "copyq menu"
 
 # Flameshot
-bindsym Shift+Print exec flameshot gui
-bindsym Shift+Insert exec flameshot gui
-bindsym Ctrl+Print exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
-bindsym Ctrl+Insert exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
+bindsym $mod+Print exec flameshot gui
+bindsym $mod+Insert exec flameshot gui
+bindsym $mod+Ctrl+Print exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
+bindsym $mod+Ctrl+Insert exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
 
 # Rofi
 bindsym $mod+d exec rofi -show drun
@@ -140,9 +128,29 @@ bindsym $mod+l exec betterlockscreen -l &
 bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +1%
 
+# ALSA Controls
+#bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+#bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+#bindsym XF86AudioMute exec "amixer -q sset Pulseaudio,0 toggle"
+
+# Alsa mixer
+bindsym $mod+Ctrl+m exec alacritty -e 'alsamixer'
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +1% # increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% # decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute
+
+# Pavuctronl
+bindsym $mod+Ctrl+p exec pavucontrol
+#exec_always --no-startup-mid pa-applet
+
+# Both Volum icon
+#exec --no-startup-id volumeicon
+
 # Start Applications
 bindsym $mod+Ctrl+b exec alacritty -e 'bmenu'
-bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'Restart dunst'"
+# bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'Restart dunst'"
 
 #################
 ## WORKSPACES ###
@@ -196,7 +204,7 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 
 ##############################
 ## DONDE IRAN LOS PROGRAMAS ##
-##############################
+################1##############
 
 # Open specific applications in floating mode
 for_window [class="Lightdm-settings"] floating enable
@@ -214,12 +222,16 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom - Licensed Account"] floating disable
 for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floating disable
 
+# IDEs
 assign [class="Code"] $ws1
 assign [class="Eclipse"] $ws1
 assign [class="runjs"] $ws1
+assign [class="DBeaver"] $ws2
+
+# Otros
 assign [class="zoom.*"] $ws3
 assign [class="Nemo"] $ws4
-assign [class="Vivaldi-stable" title="Postman"] $ws6
+assign [class="Postman"] $ws6
 assign [class="discord"] $ws3
 
 #Maximo tamaño de las ventanas flotantes
@@ -239,19 +251,19 @@ bindsym $mod+Shift+r restart
 ################################
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id nm-applet
-exec --no-startup-id blueman-applet
-exec --no-startup-id vivaldi-stable
+exec --no-startup-id bluetooth off
 exec --no-startup-id copyq
 exec --no-startup-id flameshot
-exec --no-startup-id "batsignal -b"
-exec --no-startup-id "xautolock -time 15 -locker 'betterlockscreen -l'"
+exec --no-startup-id batsignal -b
+exec --no-startup-id xautolock -time 15 -locker 'betterlockscreen -l'
+exec --no-startup-id udiskie --smart-tray 
+exec --no-startup-id xinput map-to-output 13 eDP-1
+exec --no-startup-id betterlockscreen -u $HOME/Wallpaper/ &
+exec --no-startup-id pulseaudio
 exec "sh $HOME/Scripts/feh-config.sh 0"
 exec "sh $HOME/Scripts/picom.sh"
-exec "killall -SIGQUIT -p udiskie; udiskie --smart-tray"
-exec "xinput map-to-output 13 eDP-1"
-exec --no-startup-id "flameshot"
-exec_always --no-startup-id sh "$HOME/Scripts/scriptsPolybar/launch.sh"
-exec_always --no-startup-id "betterlockscreen -u $HOME/Wallpaper/ &"
+exec "sh $HOME/Scripts/scriptsPolybar/launch.sh"
+exec vivaldi-stable
 
 ###############
 # Mode Resize #

@@ -132,7 +132,9 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - <https://noviello.it/es/como-matar-o-detener-un-proceso-en-linux/>
 - <https://www.nerdfonts.com/cheat-sheet>
 - <https://www.cyberciti.biz/tips/quickly-list-all-available-fonts.html> (fc-list command)
-- <https://github.com/puxplaying/toolbox>
+- <https://forum.archlabslinux.com/t/how-to-add-a-program-to-rofi-and-the-rocket-menu/437/2> (add app to rofi)
+- <https://atareao.es/como/del-terminal-al-portapapeles-con-xclip/>
+- <https://github.com/davatorium/rofi/issues/1009>
 
 ## Images
 

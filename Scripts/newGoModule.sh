@@ -92,7 +92,6 @@ if [ "$op" == "y" ]; then
     touch .gitignore
 
     echo "
-testing/*
 *.sh
 .vscode/*
     " > .gitignore

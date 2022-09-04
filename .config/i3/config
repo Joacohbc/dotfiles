@@ -32,7 +32,7 @@ bindsym $mod+e layout toggle split; exec notify-send 'i3 - Layout Split'
 
 # Cambiar orientacion del Split layout
 bindsym $mod+q split toggle; exec notify-send 'i3 - Split Orientation V/H'
-# bindsym $mod+Shift+h split h; exec notify-send 'tile horizontally'we
+# bindsym $mod+Shift+h split h; exec notify-send 'tile horizontally'
 # bindsym $mod+Shift+v split v; exec notify-send 'tile vertically'
 
 # Floating toggle
@@ -235,7 +235,7 @@ assign [class="Postman"] $ws6
 assign [class="discord"] $ws3
 
 #Maximo tamaño de las ventanas flotantes
-floating_maximum_size 1200 x 600
+floating_maximum_size 1300 x 700
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -259,8 +259,7 @@ exec --no-startup-id xautolock -time 15 -locker 'betterlockscreen -l'
 exec --no-startup-id udiskie --smart-tray 
 exec --no-startup-id xinput map-to-output 13 eDP-1
 exec --no-startup-id betterlockscreen -u $HOME/Wallpaper/ &
-exec --no-startup-id pulseaudio
-exec "sh $HOME/Scripts/feh-config.sh 0"
+exec "sh $HOME/Scripts/feh-config.sh 0" 
 exec "sh $HOME/Scripts/picom.sh"
 exec "sh $HOME/Scripts/scriptsPolybar/launch.sh"
 exec vivaldi-stable
@@ -277,16 +276,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 3 px or 3 ppt
-        bindsym k resize grow height 3 px or 3 ppt
-        bindsym l resize shrink height 3 px or 3 ppt
-        bindsym semicolon resize grow width 3 px or 3 ppt
+        bindsym a resize shrink width 3 px or 3 ppt
+        bindsym s resize grow height 3 px or 3 ppt 
+        bindsym W resize shrink height 3 px or 3 ppt
+        bindsym d resize grow width 3 px or 3 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 3 px or 3 ppt
-        bindsym Down resize grow height 3 px or 3 ppt
-        bindsym Up resize shrink height 3 px or 3 ppt
-        bindsym Right resize grow width 3 px or 3 ppt
+        # same bindings, but for the arrow ke
+        bindsym Left resize shrink width 14 px or 14 ppt
+        bindsym Down resize grow height 14 px or 14 ppt
+        bindsym Up resize shrink height 14 px or 14 ppt
+        bindsym Right resize grow width 14 px or 14 ppt
 
 
         # back to normal: Enter or Escape or $mod+r
@@ -310,4 +309,4 @@ gaps outer 1
 smart_gaps on
 
 #Borde de ventanas 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2

@@ -53,11 +53,5 @@ if [ $NUM_UPDATE_AUR -ne 0 ]; then
     fi
 fi
 
-# Pregunto si quiere actualizar
-msg "Reiniciar Polybar"
-if [ $? -eq 0 ]; then
-    "$HOME/Scripts/scriptsPolybar/launch.sh" &>> /dev/null
-fi
-
 echo -e "\n> Actualizacion finalizada (ENTER para salir)...<"
 read 

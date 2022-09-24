@@ -214,8 +214,9 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="flameshot"] floating enable
-for_window [class="Timeshift-gtk"] floating enable
+for_window [class="flameshot"] floating enable border normal
+for_window [class="Timeshift-gtk"] floating enable border normal
+for_window [class="copyq"] floating enable border normal
 
 #Hago todo las ventanas de clase "zoom" (osea, de Zoom Mettings) flotantes
 for_window [class="(.*join\?action\=join.*|.*zoom.*)"] floating enable
@@ -250,10 +251,10 @@ bindsym $mod+Shift+r restart
 ## INICIO TODOS MIS PROGRAMAS ##
 ################################
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nm-applet
-exec --no-startup-id bluetooth off
-exec --no-startup-id copyq
-exec --no-startup-id flameshot
+exec --no-startup-id nm-applet 
+exec --no-startup-id bluetooth off 
+exec --no-startup-id copyq 
+exec --no-startup-id flameshot 
 exec --no-startup-id batsignal -b
 exec --no-startup-id xautolock -time 15 -locker 'betterlockscreen -l'
 exec --no-startup-id udiskie --smart-tray 
@@ -261,8 +262,8 @@ exec --no-startup-id xinput map-to-output 13 eDP-1
 exec --no-startup-id betterlockscreen -u $HOME/Wallpaper/ &
 exec "sh $HOME/Scripts/feh-config.sh 0" 
 exec "sh $HOME/Scripts/picom.sh"
-exec "sh $HOME/Scripts/scriptsPolybar/launch.sh"
-exec vivaldi-stable
+exec vivaldi-stable 
+exec_always "sh $HOME/Scripts/scriptsPolybar/launch.sh"
 
 ###############
 # Mode Resize #

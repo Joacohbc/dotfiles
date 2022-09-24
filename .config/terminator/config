@@ -1,6 +1,9 @@
 [global_config]
   window_state = hidden
   hide_from_taskbar = True
+  inactive_color_offset = 0.4000000000000001
+  title_use_system_font = False
+  title_font = FiraCode Nerd Font Mono 10
 [keybindings]
 [profiles]
   [[default]]

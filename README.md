@@ -79,6 +79,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Ventoy - Create a booteable USB
 - 7z, gzip && xz - Zip manger
 - UFW - IPTablas Manager (Firewall)
+- Figlet - Cool Texts
 
 ### Packages management
 

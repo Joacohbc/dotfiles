@@ -141,6 +141,9 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +1% # increase sound v
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -1% # decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute
 
+#Emojis
+bindsym $mod+period exec ibus emoji
+
 # Pavuctronl
 bindsym $mod+Ctrl+p exec pavucontrol
 #exec_always --no-startup-mid pa-applet
@@ -226,8 +229,6 @@ for_window [class="(.*join\?action\=join.*|.*zoom.*)" title="Zoom Meeting"] floa
 # IDEs
 assign [class="Code"] $ws1
 assign [class="Eclipse"] $ws1
-assign [class="runjs"] $ws1
-assign [class="DBeaver"] $ws2
 
 # Otros
 assign [class="zoom.*"] $ws3

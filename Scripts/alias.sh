@@ -58,4 +58,4 @@ goc() {
 }
 
 #Comando goto
-source "$HOME/Archivos/Colegio_y_Estudio/Z-Proyectos/Github/goto/MyAlias.sh"
+source "$HOME/Github/goto/MyAlias.sh"

@@ -26,7 +26,7 @@ floating_modifier $mod
 bindsym $mod+f fullscreen toggle
 
 # Cambiar container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking; exec notify-send 'i3 - Layout Stacking'
+# bindsym $mod+s layout stacking; exec notify-send 'i3 - Layout Stacking' 
 bindsym $mod+w layout tabbed; exec notify-send 'i3 - Layout Tabbed'
 bindsym $mod+e layout toggle split; exec notify-send 'i3 - Layout Split'
 
@@ -89,8 +89,7 @@ bindsym Caps_Lock exec "(sleep 0.2; sh $HOME/Scripts/capsLock.sh) &"
 bindsym $mod+v exec "copyq menu"
 
 # Flameshot
-bindsym $mod+Print exec flameshot gui
-bindsym $mod+Insert exec flameshot gui
+bindsym $mod+s exec flameshot gui
 bindsym $mod+Ctrl+Print exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
 bindsym $mod+Ctrl+Insert exec flameshot screen -n 0 -c #Captura de pantalla al monitor actual
 

@@ -112,6 +112,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - Xarchiver - Zip Manager
 - Pavucontrol - Pulseuadio Manager
 - Lxappearance && Qt5ct - GKT and QT Managers
+- Main Menu - alacarte - App Link Manager
 
 ## Githubs/Post/URL that I use configure My Linux
 

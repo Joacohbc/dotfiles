@@ -138,6 +138,7 @@ My dotfiles, I use a Manjaro distro with a Windows Manager environment with bars
 - <https://forum.archlabslinux.com/t/how-to-add-a-program-to-rofi-and-the-rocket-menu/437/2> (add app to rofi)
 - <https://atareao.es/como/del-terminal-al-portapapeles-con-xclip/>
 - <https://github.com/davatorium/rofi/issues/1009>
+- <https://askubuntu.com/questions/592478/how-to-install-mouse-cursor> (install cursor)
 
 ## Images
 
